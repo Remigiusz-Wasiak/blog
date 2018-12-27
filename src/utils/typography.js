@@ -1,6 +1,13 @@
 import Typography from 'typography'
 import bootstrapTheme from 'typography-theme-bootstrap'
 
+bootstrapTheme.overrideThemeStyles = (options, styles) => ({
+    'a': {
+        textDecoration: `none`,
+        color: 'inherit'
+    }
+})
+
 const typography = new Typography(bootstrapTheme)
 
 // Hot reload typography in development.
