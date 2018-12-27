@@ -68,9 +68,9 @@ function SEO({ description, lang, meta, keywords, title }) {
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: `pl`,
   meta: [],
-  keywords: [],
+  keywords: [`javascript`, `programowanie`, `nauka programowania`, `jak programować`, `tworzenie stron`, `gatsby`],
 }
 
 SEO.propTypes = {

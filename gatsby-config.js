@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
-    author: `Kyle Mathews`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: `Remigiusz Wasiak Blog`,
+    author: `Remigiusz Wasiak`,
+    description: `Blog o programowaniu w JavaScript. Wykorzystanie JavaScript w praktyce. Sposoby na skuteczną naukę programowania.`,
+    siteUrl: `https://remigiuszwasiak.pl`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `er_wasiak`,
     },
   },
   plugins: [
