@@ -43,7 +43,12 @@ class Header extends React.Component {
           <List>
             {location.pathname !== rootPath && (
               <StyledLink>
-                <Link to="/">Start</Link>
+                <Link to={rootPath}>Start</Link>
+              </StyledLink>
+            )}
+            {location.pathname !== aboutPath && (
+              <StyledLink>
+                <Link to={aboutPath}>O blogu</Link>
               </StyledLink>
             )}
           </List>
