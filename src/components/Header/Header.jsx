@@ -32,6 +32,7 @@ class Header extends React.Component {
   render() {
     const { location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
+    const aboutPath = `${rootPath}o-blogu`
 
     return (
       <StyledHeader>
@@ -42,12 +43,14 @@ class Header extends React.Component {
           <List>
             {location.pathname !== rootPath && (
               <StyledLink>
-                <Link to="/">Start</Link>
+                <Link to={rootPath}>Start</Link>
               </StyledLink>
             )}
-            <StyledLink>
-              <Link to="/about/">O blogu</Link>
-            </StyledLink>
+            {location.pathname !== aboutPath && (
+              <StyledLink>
+                <Link to={aboutPath}>O blogu</Link>
+              </StyledLink>
+            )}
           </List>
         </nav>
       </StyledHeader>

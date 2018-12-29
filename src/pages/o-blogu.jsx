@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo.jsx'
 import { rhythm } from '../utils/typography'
 
-class About extends React.Component {
+class OBlogu extends React.Component {
     render() {
         const { data } = this.props
         const siteTitle = data.site.siteMetadata.title
@@ -37,7 +37,7 @@ class About extends React.Component {
     }
 }
 
-export default About
+export default OBlogu
 
 export const pageQuery = graphql`
   query {
