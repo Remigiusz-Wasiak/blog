@@ -37,21 +37,21 @@ class BlogPostTemplate extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <h1>{post.frontmatter.title}</h1>
-          <PostDate>{post.frontmatter.date}</PostDate>
+        <PostDate>{post.frontmatter.date}</PostDate>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <StyledHr />
         <List>
           <li>
             {previous && (
               <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
+                « {previous.frontmatter.title}
               </Link>
             )}
           </li>
           <li>
             {next && (
               <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
+                {next.frontmatter.title} »
               </Link>
             )}
           </li>
