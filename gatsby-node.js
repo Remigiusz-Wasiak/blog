@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const createPaginatedPages = require('gatsby-paginate')
 
 exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
@@ -20,8 +21,10 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
+                    date(formatString: "MMMM DD, YYYY")
                     title
                   }
+                  excerpt(pruneLength: 230)
                 }
               }
             }
@@ -33,9 +36,17 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
+        createPaginatedPages({
+          edges: result.data.allMarkdownRemark.edges,
+          createPage: createPage,
+          pageTemplate: 'src/templates/index.js',
+          pageLength: 4, // This is optional and defaults to 10 if not used
+          pathPrefix: '', // This is optional and defaults to an empty string if not used
+          context: {}, // This is optional and defaults to an empty object if not used
+        })
+
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
-
         posts.forEach((post, index) => {
           const previous =
             index === posts.length - 1 ? null : posts[index + 1].node
