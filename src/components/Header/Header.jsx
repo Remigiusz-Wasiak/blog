@@ -32,6 +32,7 @@ class Header extends React.Component {
   render() {
     const { location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
+    const aboutPath = `${rootPath}o-blogu`
 
     return (
       <StyledHeader>
@@ -45,9 +46,6 @@ class Header extends React.Component {
                 <Link to="/">Start</Link>
               </StyledLink>
             )}
-            <StyledLink>
-              <Link to="/about/">O blogu</Link>
-            </StyledLink>
           </List>
         </nav>
       </StyledHeader>
