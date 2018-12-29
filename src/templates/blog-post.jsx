@@ -40,8 +40,6 @@ class BlogPostTemplate extends React.Component {
           <PostDate>{post.frontmatter.date}</PostDate>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <StyledHr />
-        <Bio />
-
         <List>
           <li>
             {previous && (
