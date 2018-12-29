@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import { rhythm } from '../../utils/typography'
 
 const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0 auto;
   max-width: 36rem;
-  padding-bottom: 1.25rem;
+  margin: 0;
+  margin-bottom: ${rhythm(2.5)};
 `
 
 const Logo = styled.h3`
@@ -25,7 +26,7 @@ const List = styled.ul`
 
 const StyledLink = styled.li`
   margin-bottom: 0;
-  margin-left: 1.25rem;
+  margin-left: ${rhythm(1)};
 `
 
 class Header extends React.Component {
