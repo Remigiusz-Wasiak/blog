@@ -7,16 +7,16 @@ import styled from 'styled-components'
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(24)};
+  max-width: ${rhythm(26)};
   padding: ${rhythm(1.5)} ${rhythm(3 / 4)};
 `
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props;
+    const { location, children } = this.props
     return (
       <Wrapper>
-        <Header />
+        <Header location={location} />
         {children}
         <footer>
           © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>
