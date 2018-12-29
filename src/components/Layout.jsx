@@ -13,10 +13,10 @@ const Wrapper = styled.div`
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props;
+    const { location, children } = this.props
     return (
       <Wrapper>
-        <Header />
+        <Header location={location} />
         {children}
         <footer>
           © 2018, Built with <a href="https://www.gatsbyjs.org">Gatsby</a>

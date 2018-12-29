@@ -2,8 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-
-const Header = styled.header`
+const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,21 +28,31 @@ const StyledLink = styled.li`
   margin-left: 1.25rem;
 `
 
-export default () => (
-    <Header>
-      <Link to="/">
-        <Logo>RW</Logo>
-      </Link>
-      <List>
-          <StyledLink>
-              <Link to="/">Home</Link>
-          </StyledLink>
-          <StyledLink>
-              <Link to="/about/">About</Link>
-          </StyledLink>
-          <StyledLink>
-              <Link to="/contact/">Contact</Link>
-          </StyledLink>
-      </List>
-    </Header>
-)
+class Header extends React.Component {
+  render() {
+    const { location } = this.props
+    const rootPath = `${__PATH_PREFIX__}/`
+
+    return (
+      <StyledHeader>
+        <Link to="/">
+          <Logo>RW</Logo>
+        </Link>
+        <nav>
+          <List>
+            {location.pathname !== rootPath && (
+              <StyledLink>
+                <Link to="/">Start</Link>
+              </StyledLink>
+            )}
+            <StyledLink>
+              <Link to="/about/">O blogu</Link>
+            </StyledLink>
+          </List>
+        </nav>
+      </StyledHeader>
+    )
+  }
+}
+
+export default Header
