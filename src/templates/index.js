@@ -20,28 +20,14 @@ class BlogIndex extends React.Component {
     const posts = pageContext.group
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={ this.props.location } title={ siteTitle }>
         <SEO title="Strona główna" />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
+
+          return <Article node={ node } key={ title } />
         })}
-        <StyledHr></StyledHr>
-        <MainPagination data={pageContext} />
+        <MainPagination data={ pageContext } />
       </Layout>
     )
   }
