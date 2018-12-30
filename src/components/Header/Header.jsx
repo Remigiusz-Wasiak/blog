@@ -7,12 +7,12 @@ const StyledHeader = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 36rem;
+  padding: ${rhythm(0.5)} 0;
   margin: 0;
-  margin-bottom: ${rhythm(2.5)};
+  //margin-bottom: ${rhythm(2.5)};
 `
 
-const Logo = styled.h3`
+const Logo = styled.h1`
   display: inline;
   text-shadow: none;
   background-image: none;
@@ -30,13 +30,17 @@ const StyledLink = styled.li`
 `
 
 class Header extends React.Component {
+    componentDidMount() {
+        this.props.getRef(this.ref)
+    }
+
   render() {
     const { location } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const aboutPath = `${rootPath}o-blogu`
 
     return (
-      <StyledHeader>
+      <StyledHeader ref={el => (this.ref = el)}>
         <Link to="/">
           <Logo>RW</Logo>
         </Link>
