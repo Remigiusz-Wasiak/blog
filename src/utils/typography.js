@@ -5,6 +5,18 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
     'a': {
         textDecoration: `none`,
         color: 'inherit'
+    },
+    '.post a': {
+        color: `blue`
+    },
+    'pre code': {
+        display: `block`,
+        maxWidth: `100%`,
+        overflowY: `scroll`,
+        padding: `10px 14px`,
+        border: `solid 1px darkgrey`,
+        borderRadius: `4px`,
+        backgroundColor: `rgba(227, 227, 227, 0.2)`
     }
 })
 

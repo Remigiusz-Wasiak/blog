@@ -63,7 +63,7 @@ class BlogPostTemplate extends React.Component {
             <h1>{post.frontmatter.title}</h1>
             <PostDate>{post.frontmatter.date}</PostDate>
           </header>
-          <ContentWrapper dangerouslySetInnerHTML={{ __html: post.html }} />
+          <ContentWrapper className='post' dangerouslySetInnerHTML={{ __html: post.html }} />
           <StyledHr />
           <List>
             <li>
