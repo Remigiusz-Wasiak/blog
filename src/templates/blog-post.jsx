@@ -31,6 +31,24 @@ const List = styled.ul`
   margin-left: 0;
 `
 
+const StyledLink = styled(Link)`
+  display: flex;
+  align-items: center;
+`
+
+const NavText = styled.span`
+  ${scale(-1 / 5)}
+  display: inline-block;
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+  @media (max-width: 374px) {
+    max-width: 120px;
+  }
+`
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -50,16 +68,16 @@ class BlogPostTemplate extends React.Component {
           <List>
             <li>
               {previous && (
-                <Link to={previous.fields.slug} rel="prev">
-                  « {previous.frontmatter.title}
-                </Link>
+                <StyledLink to={previous.fields.slug} rel="prev">
+                    «&nbsp;<NavText>{previous.frontmatter.title}</NavText>
+                </StyledLink>
               )}
             </li>
             <li>
               {next && (
-                <Link to={next.fields.slug} rel="next">
-                  {next.frontmatter.title} »
-                </Link>
+                <StyledLink to={next.fields.slug} rel="next">
+                    <NavText>{next.frontmatter.title}</NavText>&nbsp;»
+                </StyledLink>
               )}
             </li>
           </List>
