@@ -17,6 +17,13 @@ const PostDate = styled.p`
 const StyledHr = styled.hr`
   margin-bottom: ${rhythm(1)};
 `
+const Post = styled.article`
+  padding: ${rhythm(2)} 0 ${rhythm(1)};
+`
+
+const ContentWrapper = styled.div`
+  padding-bottom: ${rhythm(1)};
+`
 
 const List = styled.ul`
   display: flex;
@@ -36,26 +43,30 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <h1>{post.frontmatter.title}</h1>
-        <PostDate>{post.frontmatter.date}</PostDate>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        <StyledHr />
-        <List>
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                « {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} »
-              </Link>
-            )}
-          </li>
-        </List>
+        <Post>
+          <header>
+            <h1>{post.frontmatter.title}</h1>
+            <PostDate>{post.frontmatter.date}</PostDate>
+          </header>
+          <ContentWrapper dangerouslySetInnerHTML={{ __html: post.html }} />
+          <StyledHr />
+          <List>
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  « {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} »
+                </Link>
+              )}
+            </li>
+          </List>
+        </Post>
       </Layout>
     )
   }
