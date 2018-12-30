@@ -16,8 +16,10 @@ const Main = styled.main(props => ({
 }))
 
 const Footer = styled.footer`
+  ${scale(-1 / 10)}
   display: flex;
   justify-content: center;
+  padding: ${rhythm(0.5)} 0;
 `
 
 class Layout extends React.Component {
@@ -38,12 +40,15 @@ class Layout extends React.Component {
   render() {
     const { location, children } = this.props
     const { usedHeight } = this.state
+    const year = new Date().getFullYear()
 
     return (
       <Wrapper>
         <Header location={location} getRef={this.getRef} />
         <Main usedHeight={usedHeight}>{children}</Main>
-        <Footer ref={el => (this.footer = el)}>© 2018 Remigiusz Wasiak</Footer>
+        <Footer ref={el => (this.footer = el)}>
+          © {year} Remigiusz Wasiak
+        </Footer>
       </Wrapper>
     )
   }

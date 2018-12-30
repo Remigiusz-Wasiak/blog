@@ -17,9 +17,6 @@ const PostDate = styled.p`
 const StyledHr = styled.hr`
   margin-bottom: ${rhythm(1)};
 `
-const Post = styled.article`
-  padding: ${rhythm(2)} 0 ${rhythm(1)};
-`
 
 const ContentWrapper = styled.div`
   padding-bottom: ${rhythm(1)};
@@ -43,7 +40,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <Post>
+        <article>
           <header>
             <h1>{post.frontmatter.title}</h1>
             <PostDate>{post.frontmatter.date}</PostDate>
@@ -66,7 +63,7 @@ class BlogPostTemplate extends React.Component {
               )}
             </li>
           </List>
-        </Post>
+        </article>
       </Layout>
     )
   }
