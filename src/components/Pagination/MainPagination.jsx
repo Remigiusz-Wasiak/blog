@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { rhythm, scale } from '../../utils/typography'
+import { rhythm } from '../../utils/typography'
 import styled from 'styled-components'
 
-const Wrapper = styled.div`
-  margin: ${rhythm(1.5)} 0 ${rhythm(1.5)};
+const Wrapper = styled.nav`
   display: flex;
   align-content: center;
   justify-content: space-between;
@@ -29,14 +28,13 @@ class MainPaginantion extends React.Component {
         }
 
         return (
-            <Wrapper>
-                <div>
+            <div>
+                <hr/>
+                <Wrapper>
                     <PaginationLink disabled={first} url={previousPage} text='« Poprzednia'></PaginationLink>
-                </div>
-                <div>
                     <PaginationLink disabled={last} url={nextPage} text='Następna »'></PaginationLink>
-                </div>
-            </Wrapper>
+                </Wrapper>
+            </div>
         )
     }
 }
