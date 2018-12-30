@@ -16,7 +16,7 @@ const Main = styled.main(props => ({
 }))
 
 const Footer = styled.footer`
-  ${scale(-1 / 10)}
+  ${scale(-1 / 5)}
   display: flex;
   justify-content: center;
   padding: ${rhythm(0.5)} 0;
