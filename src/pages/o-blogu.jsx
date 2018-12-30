@@ -18,7 +18,7 @@ class OBlogu extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Strona o mnie" />
+        <SEO title="Strona o blogu" />
         <div>
           <p>
             Cześć! Mam na imię Remigiusz. Jestem mężem, synem, bratem i powoli
