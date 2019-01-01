@@ -46,7 +46,7 @@ class OBlogu extends React.Component {
           </ul>
 
           <p>
-            to serdecznie Witam Cię na moim blogu. Będę starał się tu pokazywać
+            to serdecznie witam Cię na moim blogu. Będę starał się tu pokazywać
             moją drogę rozwoju, ale również przekazywać porady dla osób mniej
             doświadczonych.
           </p>
