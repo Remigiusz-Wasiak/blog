@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        //trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: `UA-131557359-1`,
       },
     },
     `gatsby-plugin-feed`,
@@ -74,11 +74,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-      {
-          resolve: `gatsby-plugin-styled-components`,
-          options: {
-              displayName: false,
-          },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: false,
       },
+    },
   ],
 }
