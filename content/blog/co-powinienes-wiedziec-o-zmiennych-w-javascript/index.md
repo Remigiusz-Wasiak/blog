@@ -10,9 +10,10 @@ Przeczytasz o tym, jakie są rodzaje zmiennych w JavaScript i co je charakteryzu
 
 ## Rodzaje zmiennych i bloki
 Być może już wiesz, że w JavaScript do zmiennych możemy przypisać każdą wartość, nie ma podziału na zmienne do przechowywania wyłącznie liczb czy tekstu (na przykład w przeciwieństwie do Javy). Od wersji ECMAScript 2015 wyróżniamy następujące rodzaje zmiennych:
-	1. let
-	2. const
-	3. var
+1. let
+2. const
+3. var
+
 Skoro do zmiennej możemy przypisać każdą wartość, to po co nam aż 3 różne możliwości definiowania zmiennych? Jak to zwykle w programowaniu bywa - diabeł tkwi w szczegółach.
 
 Zanim przejdziemy do charakterystyki poszczególnych rodzajów zmiennych warto by się zaznajomić z pojęciem **bloku**. W JavaScript blok ograniczony jest dwoma nawiasami klamrowymi `{ ... }`. O wszystkim co znajduje się pomiędzy tymi klamrami możemy powiedzieć, że znajduje się w zasięgu tego bloku. Bloki mogą występować w kodzie samodzielnie, mogą też być poprzedzone instrukcją warunkową, np. `if(x = 2) { ... }`, pętlą, np. `while(x < 2) { ... }`, ale mogą również stanowić ciało funkcji np. `function add() { ... }`. Bloki służą do grupowania instrukcji, które chcemy wykonywać. Być może chcemy dany blok instrukcji wykonać kilka razy stosując pętlę, a może chcemy go wykonać tylko wtedy gdy zostanie spełniony określony warunek. Z kolei funkcje pozwalają nam wykonywać bloki instrukcji w dowolnym miejscu w kodzie. Jak widzisz, bloki są podstawowym elementem języka i używa się ich bardzo często. 
@@ -46,7 +47,7 @@ console.log('y : ', y); // y : undefined (1)
 y = 5;
 console.log('y : ', y); // y : 5 (2)
 ```
-Jak można zauważyć, zmienna let bez przypisanej wartości zwraca `undefined` (1). O tym czym dokładnie jest **undefined** będziemy uczyć się w kolejnych wpisach.
+Jak można zauważyć, zmienna **let** bez przypisanej wartości zwraca `undefined` (1). O tym czym dokładnie jest **undefined** będziemy uczyć się w kolejnych wpisach.
 
 Trzecią bardzo ważną cechą **let** jest jej zasięg blokowy. Zmienna **let** będzie dostępna tylko w tym bloku w którym została umieszczona.
 ```javascript
@@ -86,7 +87,7 @@ const y = 5;
 y = 10;  // Uncaught TypeError: Assignment to constant variable.
 
 ```
-Zwróć uwagę, że piszę o niezmienności **przypisania** wartości, ma to bardzo duże znaczenie, ponieważ powszechna jest wśród początkujących programistów błędna opinia, że przypisanej wartości nie można zmienić - owszem można, ale w przypadku bardziej złożonych wartości. Na przykład w przypadku obiektów czy tablic, możliwa jest ich modyfikacja - natomiast nie możliwe jest ich nadpisanie przez inny obiekt czy tablicę.
+Zwróć uwagę, że piszę o niezmienności **przypisania** wartości, ma to bardzo duże znaczenie, ponieważ powszechna jest wśród początkujących programistów błędna opinia, że przypisanej wartości nie można zmienić - owszem można, ale w przypadku bardziej złożonych wartości. Na przykład w przypadku obiektów czy tablic, możliwa jest ich modyfikacja - natomiast nie możliwe jest ich nadpisanie przez inny obiekt czy tablicę. Poniższy przykład powinien wyjaśnić nieco sprawę.
 ```javascript
 const exampleObject = { exampleProperty: 0 }; //	(1)
 console.log('first example : ', exampleObject); // first example : {exampleProperty: 0}	
@@ -140,7 +141,7 @@ function example() { // (1)
 example(); // (3)
 console.log({x}); // x: undefined (5)
 ```
-W sytuacji powyżej definiujemy funkcję o nazwie `example` (1) w której deklarujemy zmienną `x` o wartości `10` (2). Wywołujemy funkcję `example` (3) w której `console.log()` wyświetla nam w konsoli wartość `x` - `10` (4), ponieważ zmienna `x` była zadeklarowana w funkcji `example`. `console.log()` spoza funkcji wyświetla wartość `x` równą `undefined` (5), dlatego że zmienna `x` ma zasięg tylko w obrębie funkcji `example`. Spójrzmy na kolejny przykład.
+W sytuacji powyżej definiujemy funkcję o nazwie `example` (1) w której deklarujemy zmienną `x` o wartości `10` (2). Wywołujemy funkcję `example` (3) w której `console.log()` wyświetla nam w konsoli wartość `x: 10` (4), ponieważ zmienna `x` była zadeklarowana w funkcji `example`. `console.log()` spoza funkcji wyświetla wartość `x` równą `undefined` (5), dlatego że zmienna `x` ma zasięg tylko w obrębie funkcji `example`. Jeżeli coś jest dla Ciebie niejasne, prześledź ten kod jeszcze raz i dokładnie wczytaj się w opis jego działania. Spójrzmy na kolejny przykład.
 
 ```javascript
 function outer() { // (1)
@@ -170,12 +171,12 @@ function example() { // (1)
 	console.log({x}); // x: 10 (5)
 }
 
-example();
+example(); // (6)
 ```
-Ten przypadek wygląda z pozoru niewinnie, a w rzeczywistości może stwarzać problemy. Definiujemy funkcję `example` (1) w której zamieszczamy instrukcję warunkową `if` (2) - w warunku `if` umieściłem `true`, żeby blok instrukcji po warunku był wykonany. Wewnątrz bloku poprzedzonego przez `if` deklarujemy zmienną `var x` o wartości `10` (3). Wywołanie funkcji `example()` (4) powoduje wykonanie instrukcji z bloku `if` - `console.log` wyświetla nam wartość `x` czyli `10` (4), a następnie wyświetlana jest w konsoli wartość `x` spoza bloku `if` (5) - jak widzimy, wartość `x` znowu wynosi `10`. Możemy więc powiedzieć, że zmienna var pomimo, że jest zadeklarowana w bloku, to jej dostępność ogranicza zakres funkcji, dzięki czemu widoczna jest poza blokiem - czego dowodem jest wartość w konsoli (5). Powyższa sytuacja może nie być zawsze na rękę i jest prawdopodobne, że będzie nam kiedyś zależało na tym, aby ograniczyć widoczność zmiennej `x` tylko do zasięgu bloku `if`. Jak to zrobić? Bardzo prosto - np. użyć const zamiast var. A co jeśli nie używamy w projekcie ECMAScript 2015? Cóż, z tego też można wyjść obronną ręką poprzez użycie IIFE, czyli funkcji która jest natychmiastowo wykonywana. Prawdopodobnie napiszę o tym kiedyś w innym wpisie, ale jeżeli już chciałbyś wiedzieć o co chodzi to odsyłam do wujka google, z pewnością znajdziesz odpowiedź :)
+Ten przypadek wygląda z pozoru niewinnie, a w rzeczywistości może stwarzać problemy. Definiujemy funkcję `example` (1) w której zamieszczamy instrukcję warunkową `if` (2) - w warunku `if` umieściłem `true`, żeby blok instrukcji po warunku był wykonany. Wewnątrz bloku poprzedzonego przez `if` deklarujemy zmienną `var x` o wartości `10` (3). Wywołanie funkcji `example()` (6) powoduje wykonanie instrukcji z bloku `if` - `console.log` wyświetla nam wartość `x` czyli `10` (4), a następnie wyświetlana jest w konsoli wartość `x` spoza bloku `if` (5) - jak widzimy, wartość `x` znowu wynosi `10`. Możemy więc powiedzieć, że zmienna var pomimo, że jest zadeklarowana w bloku warunkowym, to jej dostępność ogranicza zakres funkcji, przez co widoczna jest poza blokiem warunkowym. Dowodem na to jest wartość w konsoli (5). Powyższa sytuacja może nie być zawsze na rękę i jest prawdopodobne, że będzie nam kiedyś zależało na tym, aby ograniczyć widoczność zmiennej `x` tylko do zasięgu bloku `if`. Jak to zrobić? Bardzo prosto - np. użyć const zamiast var. A co jeśli nie używamy w projekcie ECMAScript 2015? Cóż, z tego też można wyjść obronną ręką poprzez użycie IIFE, czyli funkcji która jest natychmiastowo wykonywana. Prawdopodobnie napiszę o tym kiedyś w innym wpisie, ale jeżeli już chciałbyś wiedzieć o co chodzi to odsyłam do wujka google, z pewnością znajdziesz odpowiedź :)
 
 ## Obiekt globalny
-Warto jeszcze wspomnieć o jeszcze jednej cesze zmiennych w JavaScript, którą jest przynależność (lub jej brak) do własności obiektu globalnego - dla przeglądarki będzie to obiekt window, a dla Node.JS obiekt global. Nie chcę się rozwodzić teraz nad tym czym są obiekty globalne, na ten moment po prostu przyjmijmy, że takowe istnieją i dobrze jest o nich wiedzieć.
+Warto wspomnieć o jeszcze jednej cesze zmiennych w JavaScript, którą jest przynależność (lub jej brak) do własności obiektu globalnego - dla przeglądarki będzie to obiekt `window`. Nie chcę się rozwodzić teraz nad tym czym jest obiekt globalny, na ten moment po prostu przyjmijmy, że taki istnieje i dobrze jest o tym wiedzieć.
 O co chodzi? Zacznijmy od zmiennej var:
 Jeżeli zdefiniujemy zmienną var poza jakąkolwiek funkcją, zmienna ta zostanie przypisana do właności obiektu globalnego. Zerknijmy na przykład poniżej:
 ```javascript
