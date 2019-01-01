@@ -268,7 +268,7 @@ for (let j = 0; j < 7; j++) {
 	console.log({j});
 }
 
-// Na końcu znowu wyświetl wartość i w obiekcie globalnym 
+// Na końcu znowu wyświetl wartość j w obiekcie globalnym 
 console.log('global object after let loop:', window.j); // (3)
 
 ```
