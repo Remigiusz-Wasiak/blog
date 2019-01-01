@@ -21,7 +21,7 @@ exports.createPages = ({ graphql, actions }) => {
                     slug
                   }
                   frontmatter {
-                    date(formatString: "MMMM DD, YYYY")
+                    date(formatString: "DD-MM-YYYY")
                     title
                   }
                   excerpt(pruneLength: 230)
