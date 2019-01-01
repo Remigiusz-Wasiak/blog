@@ -59,7 +59,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Remigiusz Wasiak Blog`,
-        short_name: `GatsbyJS`,
+        short_name: `RW Blog`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#ffffff`,
