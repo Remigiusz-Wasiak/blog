@@ -9,6 +9,9 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
     '.post a': {
         color: `blue`
     },
+    '.post .gatsby-highlight': {
+        wordWrap: `normal`
+    },
     'pre code': {
         display: `block`,
         maxWidth: `100%`,
