@@ -21,14 +21,6 @@ const Date = styled.p`
   margin-bottom: ${rhythm(0.25)};
 `
 
-const StyledLink = styled(Link)`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-`
-
 class Article extends React.Component {
   render() {
     const { node } = this.props
@@ -40,11 +32,10 @@ class Article extends React.Component {
     return (
       <Wrapper>
           <ArticleHeader>
-            <Header>{ title }</Header>
-            <Date>{ date }</Date>
+              <Link to={ slug }><Header>{ title }</Header></Link>
+              <Link to={ slug }><Date>{ date }</Date></Link>
           </ArticleHeader>
-          <p dangerouslySetInnerHTML={{ __html: description }} />
-          <StyledLink to={ slug }></StyledLink>
+          <Link to={ slug }><p dangerouslySetInnerHTML={{ __html: description }} /></Link>
       </Wrapper>
     )
   }
