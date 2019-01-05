@@ -142,15 +142,12 @@ example(); // (3)
 console.log({x}); // x: undefined (5)
 ```
 W sytuacji powyżej definiujemy funkcję o nazwie `example` (1) w której deklarujemy zmienną `x` o wartości `10` (2). Wywołujemy funkcję `example` (3) w której `console.log()` wyświetla nam w konsoli wartość `x: 10` (4), ponieważ zmienna `x` była zadeklarowana w funkcji `example`. `console.log()` spoza funkcji wyświetla wartość `x` równą `undefined` (5), dlatego że zmienna `x` ma zasięg tylko w obrębie funkcji `example`. Jeżeli coś jest dla Ciebie niejasne, prześledź ten kod jeszcze raz i dokładnie wczytaj się w opis jego działania. Spójrzmy na kolejny przykład.
-
 ```javascript
 function outer() { // (1)
 	var x = 10; // (2)
-	
 	function inner() { // (3)
 		console.log({x}); // x: 10 (6)
 	}
-	
 	inner(); // (5)
 }
 
@@ -160,14 +157,10 @@ W tej sytuacji widzimy funkcję `outer` (1), w której deklarujemy zmienną `x` 
 
 ```javascript
 function example() { // (1)
-
 	if (true) { // (2)
-	
 		var x = 10; // (3)
 		console.log({x}); // x: 10 (4)
-		
 	}
-	
 	console.log({x}); // x: 10 (5)
 }
 
@@ -199,6 +192,7 @@ const outerConst = 10;
 console.log('outerLet:', window.outerLet); // outerLet: undefined
 console.log('outerConst:', window.outerConst); // outerConst: undefined
 ```
+
 ## Kiedy używać poszczególnych rodzajów zmiennych?
 Zacznijmy od var - jeżeli w projekcie nad którym pracujesz używasz ECMAScript 2015 to o używaniu var możesz całkowicie zapomnieć. Są podobno wyjątkowe sytuacje, w których użycie var jest zasadne ale na chwilę obecną nie mam przykładów by to wyjaśnić.
 
@@ -216,15 +210,12 @@ Wszystkie ćwiczenia możesz wykonywać w konsoli swojej przeglądarki. W zależ
 Poszczególne kroki są opisane w komentarzach kodu poniżej
 ```javascript
 // Zadeklaruj w konsoli zmienną let:
-
 let x;
 
 // Następnie zadeklaruj zmienną const:
-
 const x = 20; // co otrzymałeś i dlaczego?
 
 // I jeszcze ostatnią zmienną - var:
-
 var x = 20; // co otrzymałeś i dlaczego?
 ```
 
@@ -235,11 +226,9 @@ Poszczególne kroki są opisane w komentarzach kodu poniżej
 var y = 10;
 
 // Następnie zadeklaruj zmienną let:
-
 let y = 20; // co otrzymałeś i dlaczego?
 
 // Następnie zadeklaruj zmienną var:
-
 var y = 20; // co otrzymałeś? Jaką wartość ma teraz y i dlaczego? 
 
 ```
