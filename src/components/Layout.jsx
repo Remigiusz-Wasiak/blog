@@ -3,6 +3,8 @@ import { Link } from 'gatsby'
 import Header from './Header/Header'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+
 
 const Wrapper = styled.div`
   margin-left: auto;

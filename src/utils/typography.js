@@ -2,25 +2,37 @@ import Typography from 'typography'
 import bootstrapTheme from 'typography-theme-bootstrap'
 
 bootstrapTheme.overrideThemeStyles = (options, styles) => ({
-    'a': {
-        textDecoration: `none`,
-        color: 'inherit'
-    },
-    '.post a': {
-        color: `blue`
-    },
-    '.post .gatsby-highlight': {
-        wordWrap: `normal`
-    },
-    'pre code': {
-        display: `block`,
-        maxWidth: `100%`,
-        overflowY: `scroll`,
-        padding: `10px 14px`,
-        border: `solid 1px darkgrey`,
-        borderRadius: `4px`,
-        backgroundColor: `rgba(227, 227, 227, 0.2)`
-    }
+  a: {
+    textDecoration: `none`,
+    color: 'inherit',
+  },
+  '.post a': {
+    color: `blue`,
+  },
+
+  '.gatsby-highlight': {
+    backgroundColor: `#2d2d2d`,
+    borderRadius: `0.3em`,
+    margin: `0.5em 0`,
+    padding: `0.5em`,
+    overflow: `auto`,
+  },
+
+  '.gatsby-highlight pre[class*="language-"].line-numbers': {
+    padding: `0`,
+    paddingLeft: `2.8em`,
+    overflow: `initial`,
+  },
+
+  ':not(pre) > code.language-text': {
+    backgroundColor: `#eee !important`,
+    fontWeight: `bold`,
+    color: `inherit`,
+  },
+
+  '.post .gatsby-highlight': {
+    wordWrap: `normal`,
+  },
 })
 
 const typography = new Typography(bootstrapTheme)
