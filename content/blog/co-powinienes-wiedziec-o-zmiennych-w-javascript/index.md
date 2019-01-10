@@ -39,7 +39,7 @@ console.log('x : ', x); // x : 5
 
 let x = x + 1; // Uncaught SyntaxError: Identifier 'x' has already been declared
 ```
-Drugą cechą charakterystyczną dla **let** jest to, że nie trzeba jej inicjalizować (nadawać jej początkowej wartości). Być może w trakcie pisania programu nie będziesz wiedział jaką wartość początkową ma mieć dana zmienna i będziesz nadawać ją później. Miejmy tylko na względzie to, że nieuzasadniony brak deklarowania zmiennych nie zalicza się do dobrych praktyk - jeżeli znamy wartość początkową zmiennej to ją nadajmy.  
+Drugą cechą charakterystyczną dla **let** jest to, że nie trzeba jej inicjalizować (nadawać jej początkowej wartości). Być może w trakcie pisania programu nie będziesz wiedział jaką wartość początkową ma mieć dana zmienna i będziesz nadawać ją później. Miejmy tylko na względzie to, że nieuzasadniony brak inicjalizowania zmiennych nie zalicza się do dobrych praktyk - jeżeli znamy wartość początkową zmiennej to ją nadajmy.  
 ```javascript
 let y;
 console.log('y : ', y); // y : undefined (1)
