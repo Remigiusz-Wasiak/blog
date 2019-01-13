@@ -9,7 +9,7 @@ Jest to pierwszy post z serii o dokumentowaniu powstawania bloga. Dzisiaj opowie
 GatsbyJS jest generatorem stron statycznych (jednym z wielu). Przetwarza pliki źródłowe i przygotowuje nam strukturę statycznych plików do wrzucenia na serwer. Takie rozwiązanie ma swoje wady i zalety, jednakże w przypadku tego bloga, zalety zdecydowanie przeważają nad wadami. Pozwól, że najpierw omówimy sobie czym są strony statyczne i dynamiczne, by mieć lepszy ogląd sytuacji.
 
 ### Strony statyczne vs strony dynamiczne
-Żeby rozwinąć temat trzeba poznać podstawy działania Internetu, zrobię to w bardzo wielkim skrócie i zachęcam Cię byś poszukał dokładniejszych informacji na temat. Główne role w komunikacji w Internecie należą do przeglądarki internetowej (zwanej jako client) oraz serwera WWW (server). Komunikują się one za pomocą protokołu HTTP. Komunikacja ta polega na wysyłaniu przez przeglądarkę "HTTP requests" do serwera, który odpowiada poprzez " HTTP response". W takiej odpowiedzi serwera może znajdować się plik html strony, którą przeglądarka ma wyświetlić.
+Żeby rozwinąć temat trzeba poznać podstawy działania Internetu, zrobię to w bardzo wielkim skrócie i zachęcam Cię byś poszukał dokładniejszych informacji na ten temat. Główne role w komunikacji w Internecie należą do przeglądarki internetowej (zwanej jako client) oraz serwera WWW (server). Komunikują się one za pomocą protokołu HTTP. Komunikacja ta polega na wysyłaniu przez przeglądarkę "HTTP requests" do serwera, który odpowiada poprzez " HTTP response". W takiej odpowiedzi serwera może znajdować się plik html strony, którą przeglądarka ma wyświetlić.
  
 **Strony statyczne** znajdują się fizycznie na serwerze, dlatego w ich przypadku, serwer po otrzymaniu zapytania od przeglądarki od razu przesyła w odpowiedzi plik html.
 
@@ -26,7 +26,7 @@ Mogłoby się wydawać, że strony statyczne przez swój brak "dynamiki" są roz
 Strony statyczne cechują się przede wszystkim bardzo dużą szybkością ładowania oraz wysokim bezpieczeństwem. Strony dynamiczne, pomimo tego że często uzbrojone są w dodatkowe mechanizmy typu cache (możliwość zapisania stanu naszej strony / podstrony na serwerze), dzięki czemu serwer nie musi czekać na jej wyrenderowanie), mogą co najwyżej **próbować** osiągać podobne rezultaty szybkości. Dodatkowo, strony dynamiczne ze względu na mniejsze lub większe obcowanie z bazami danych, narażone są na większą ilość potencjalnych luk bezpieczeństwa, co w przypadku stron statycznych jest zdecydowanie ograniczone. 
 
 ### Dlaczego zdecydowałem się na GatsbyJS?
-GatsbyJS nie jest CMSem typu Wordpress. Nie posiada panelu admina, gdzie można sobie wyklikać ustawienia, zainstalować pluginy czy opublikować stronę / post. Jest to trochę bardziej skomplikowane narzędzie, ale dla mnie jest tym co wpisuje się doskonale w moje kryteria wyboru. Nie znam PHP, znam za to trochę JavaScript - czyli środowisko Gatsby. Na tym mógłbym zakończyć moje uzasadnienie, ale gatsby oferuje znacznie więcej niż środowisko JavaScript.
+GatsbyJS nie jest CMSem typu Wordpress. Nie posiada panelu admina, gdzie można sobie wyklikać ustawienia, zainstalować pluginy czy opublikować stronę / post. Jest to trochę bardziej skomplikowane narzędzie, ale dla mnie jest tym co wpisuje się doskonale w moje kryteria wyboru. Nie znam PHP, znam za to JavaScript - czyli środowisko Gatsby. Na tym mógłbym zakończyć moje uzasadnienie, ale gatsby oferuje znacznie więcej niż środowisko JavaScript.
 
 GatsbyJS bardzo ułatwia budowanie strony o szybkim czasie ładowania oraz spełniającej standard PWA (Progressive Web App, w dużym skrócie jest to strona, która może działać bez połączenia z Internetem oraz bez przeglądarki internetowej). Jako narzędzie samo w sobie, GatsbyJS okraszony jest wieloma nowymi technologiami webowymi. Strony tworzone przy jego pomocy pisane są w React.js, a ich stylowanie może odbywać się na wiele różnych spososbów. Począwszy od nowszych metod takich jak CSS-in-JS, styled-components, CSS Modules, a skończywszy na starszych (co nie znaczy, że gorszych) - Sass, Less czy po prostu zwykłym CSS. Wszystkie skrypty naszej strony dzielone są na paczki przy pomocy Webpacka, a dane procesowane są przy pomocy GraphQL.
 
@@ -73,7 +73,7 @@ W punkcie 5 uruchamiamy wersję developerską naszego projektu, jeżeli wszystko
 ![gatsby develop](./gatsby-develop.png)
 
 
-Widzimy, że kompilacja projektu przebiegła pomyślnie - "Compiled successfully". Gatsby wypisał nam w terminalu również adres pod którym możemy zobaczyć nasz projekt. Otwórzmy zatem przeglądarkę i zajrzyjmy pod wskazany adres: http://localhost:8000/
+Widzimy, że kompilacja projektu przebiegła pomyślnie - "Compiled successfully". Gatsby wypisał nam w terminalu również adres pod którym możemy zobaczyć nasz projekt. Otwórzmy zatem przeglądarkę i zajrzyjmy pod wskazany adres: localhost:8000.
 
 ![localhost](./localhost2.png)
 
