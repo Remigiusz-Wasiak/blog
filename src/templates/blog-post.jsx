@@ -7,11 +7,15 @@ import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
 
+const StyledMainHeader = styled.h1`
+  line-height: ${rhythm(1.75)};
+`
+
 const PostDate = styled.p`
   ${scale(-1 / 5)};
   display: block;
   margin-bottom: ${rhythm(1)};
-  margin-top: ${rhythm(-1)};
+  margin-top: ${rhythm(-0.6)};
 `
 
 const StyledHr = styled.hr`
@@ -60,7 +64,7 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         <article>
           <header>
-            <h1>{post.frontmatter.title}</h1>
+            <StyledMainHeader>{post.frontmatter.title}</StyledMainHeader>
             <PostDate>{post.frontmatter.date}</PostDate>
           </header>
           <ContentWrapper className='post' dangerouslySetInnerHTML={{ __html: post.html }} />
