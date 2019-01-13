@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
   justify-content: space-between;
   padding: ${rhythm(0.5)} 0;
   margin: 0;
-  //margin-bottom: ${rhythm(2.5)};
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 `
 
 const Logo = styled.h1`
