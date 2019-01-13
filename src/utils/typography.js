@@ -2,6 +2,7 @@ import Typography from 'typography'
 import bootstrapTheme from 'typography-theme-bootstrap'
 
 bootstrapTheme.overrideThemeStyles = (options, styles) => ({
+  // links default styles
   a: {
     textDecoration: `none`,
     color: 'inherit',
@@ -10,6 +11,7 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
     color: `blue`,
   },
 
+  // code blocks default styles
   '.gatsby-highlight': {
     backgroundColor: `#2d2d2d`,
     borderRadius: `0.3em`,
@@ -33,6 +35,15 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
   '.post .gatsby-highlight': {
     wordWrap: `normal`,
   },
+
+  //headers default styles
+  h2: {
+      fontSize: typography.rhythm(1.1),
+  },
+
+  h3: {
+      fontSize: typography.rhythm(0.9),
+  }
 })
 
 const typography = new Typography(bootstrapTheme)
