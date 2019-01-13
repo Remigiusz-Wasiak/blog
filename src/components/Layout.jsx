@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 `
 const Main = styled.main(props => ({
   minHeight: `calc(100vh - ${props.usedHeight}px)`,
-  padding: `${rhythm(1.5)} 0`,
+  padding: `${rhythm(2)} 0 ${rhythm(1.5)}`,
 }))
 
 const Footer = styled.footer`
