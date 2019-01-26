@@ -198,7 +198,7 @@ Zacznijmy od var - jeżeli w projekcie nad którym pracujesz używasz ECMAScript
 
 Co w takim razie z const i let. Kiedy używać pierwszego, a kiedy drugiego? Zalecenie ogólne jest takie, aby let używać tylko wtedy kiedy nie można użyć const - czyli wtedy gdy zmienna będzie zmieniać przypisanie wartości. Jednakże tutaj pojawia się też trochę inny punkt widzenia - w zasadzie to nie wykluczający całkowicie poprzedniego. Const ma służyć przede wszystkim poprawie czytelności kodu - używajmy go wtedy, gdy chcemy zasygnalizować innym osobom czytającym nasz kod, że dana zmienna jest z założenia stałą i nie może się zmieniać.
 
-## Praca domowa
+## Praca własna
 Praktyka jest ważniejsza od teorii, zachęcam Cię do poeksperymentowania ze zmiennymi by utrwalić sobie zasady ich działania. Zrób poniższe ćwiczenia i zastanów się (szukając ew. odpowiedzi w tym poście) czemu otrzymujesz taki a nie inny wynik. 
 
 Wszystkie ćwiczenia możesz wykonywać w konsoli swojej przeglądarki. W zależności od tego z jakiej przeglądarki korzystasz, konsolę możesz uruchomić w następujący sposób:
