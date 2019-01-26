@@ -34,6 +34,7 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
 
   '.post .gatsby-highlight': {
     wordWrap: `normal`,
+    marginBottom: `1.5rem`,
   },
 
   //headers default styles

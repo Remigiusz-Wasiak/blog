@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
+import { DiscussionEmbed } from 'disqus-react'
 
 const StyledMainHeader = styled.h1`
   line-height: ${rhythm(1.75)};
@@ -58,6 +59,12 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const disqusShortname = 'remigiusz-wasiak-blog'
+    const disqusConfig = {
+      identifier: post.id,
+      title: post.frontmatter.title,
+    }
+
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -86,6 +93,7 @@ class BlogPostTemplate extends React.Component {
             </li>
           </List>
         </article>
+        <DiscussionEmbed shortname={ disqusShortname } config={ disqusConfig } />
       </Layout>
     )
   }
