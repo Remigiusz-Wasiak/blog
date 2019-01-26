@@ -39,6 +39,7 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-autolink-headers`, // must be before prismjs (common bug)
           {
             resolve: `gatsby-remark-prismjs`,
             oprions: {
@@ -87,6 +88,6 @@ module.exports = {
         displayName: false,
       },
     },
-    `gatsby-plugin-netlify`, // must be last in the array
+    `gatsby-plugin-netlify`, // must be last in the array (common bug)
   ],
 }
