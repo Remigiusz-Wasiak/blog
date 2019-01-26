@@ -27,6 +27,10 @@ const ContentWrapper = styled.div`
   padding-bottom: ${rhythm(1)};
 `
 
+const DisqusWrapper = styled.div`
+  padding: 0 20px;
+`
+
 const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +97,10 @@ class BlogPostTemplate extends React.Component {
             </li>
           </List>
         </article>
-        <DiscussionEmbed shortname={ disqusShortname } config={ disqusConfig } />
+        <DisqusWrapper>
+          <DiscussionEmbed shortname={ disqusShortname } config={ disqusConfig } />
+        </DisqusWrapper>
+
       </Layout>
     )
   }
