@@ -45,7 +45,7 @@ Jak widzisz, na samym początku zainicjalizowaliśmy zmienne a, b, c, d, e róż
 Główną cechą typów prostych jest to, że są porównywane i przekazywane poprzez **wartość**. Co to tak na prawdę oznacza?
 
 ### Porównywanie i przekazywanie przez wartość
-Przygotuj się teraz na masło maślane, ale trochę teorii też trzeba liznąć, chociażby po to, by mieć później odniesienie to typów referencyjnych. W przypadku typów prostych - zmienna przechowuje wartość i gdy porównujemy zmienne z wartościami typu prostego to tak na prawdę porównujemy wartości. Może się to wydawać oczywiste, ale zmienisz trochę punkt widzenia, gdy poznasz charakterystykę typów referencyjnych. Zerknij na przykład poniżej.
+Trochę teorii niestety trzeba liznąć. W przypadku typów prostych - zmienna przechowuje wartość i gdy porównujemy zmienne z wartościami typu prostego to tak na prawdę porównujemy wartości. Może się to wydawać oczywiste, ale zmienisz trochę punkt widzenia, gdy poznasz charakterystykę typów referencyjnych. Zerknij na przykład poniżej.
 ```javascript
 const a = 10; // (1)
 const b = 10; // (2)
@@ -85,7 +85,7 @@ console.log(a.length); // 5 (3)
 a.isEmpty = false; // (4)
 console.log(a.isEmpty); // undefined (5)
 ```
-Tu się zaczęły dziwne rzeczy co? Przypisaliśmy zmiennej a wartość typu *string*, a następnie wypisaliśmy w konsole wartość własności length zmiennej `a` (1). Własność length dla wartości *string* przechowuje ilość znaków ciągu tekstowego. Jak pewnie już policzyłeś - słowo **tekst** zawiera 5 znaków czyli wszystko się zgadza. Co się stało potem? Próbowałem zmodyfikować własność length dla zmiennej `a` (2), ale jak się okazuje, taka operacja nie działa, własność length dalej ma tą samą wartość (3). Ostatnią czynnością była próba stworzenia nowej własności `isEmpty` zmiennej `a` i przypisania jej wartości `false` (4). Niestety łatwo nie jest, próba wyświetlenia wartości z nowo dodanej własności kończy się fiaskiem, terminal pokazuje nam `undefined`.  Dzieje się tak, ponieważ zmienna `a` nie posiada własności `isEmpty`. 
+Tu się zaczęły dziwne rzeczy co? Przypisaliśmy zmiennej a wartość typu *string*, a następnie wypisaliśmy w konsoli wartość własności length zmiennej `a` (1). Własność length dla wartości *string* przechowuje ilość znaków ciągu tekstowego. Jak pewnie już policzyłeś - słowo **tekst** zawiera 5 znaków czyli wszystko się zgadza. Co się stało potem? Próbowałem zmodyfikować własność length dla zmiennej `a` (2), ale jak się okazuje, taka operacja nie działa, własność length dalej ma tą samą wartość (3). Ostatnią czynnością była próba stworzenia nowej własności `isEmpty` zmiennej `a` i przypisania jej wartości `false` (4). Niestety, jest tak jak wspomniałem wcześniej. Dla typów prostych nie można modyfkować własności (w tym także dodawać i usuwać), terminal pokazuje nam `undefined` (5).  Dzieje się tak, ponieważ zmienna `a` nie posiada własności `isEmpty`. 
 
 ## Charakterystyka typów referencyjnych
 Wiemy już, że wszystko, co nie jest typem prostym jest obiektem - czyli typem referencyjnym. Pierwszą cechą charakterystyczną dla tych typów jest to, że są przekazywane i porównywane poprzez **referencję**. No dobrze, ale czym tak właściwie jest ta **referencja**? Musisz to dobrze zrozumieć, dlatego postaram się przedstawić te zagadnienie jak najbardziej obrazowo. Brak pełnego zrozumienia będzie Cię później kosztował wiele nerwów i przelanego niepotrzebnie nad kodem potu. 
