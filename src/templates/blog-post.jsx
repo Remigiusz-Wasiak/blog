@@ -29,6 +29,10 @@ const ContentWrapper = styled.div`
 
 const DisqusWrapper = styled.div`
   padding: 0 20px;
+  
+  @media (max-width: 500px) {
+    padding: 0;
+  }
 `
 
 const List = styled.ul`
