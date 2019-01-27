@@ -9,8 +9,8 @@ import styled from 'styled-components'
 import { DiscussionEmbed } from 'disqus-react'
 
 const StyledMainHeader = styled.h1`
-  line-height: ${rhythm(1.75)};
-  margin-bottom: ${rhythm(0.9)}
+  line-height: ${rhythm(1.6)};
+  margin-bottom: ${rhythm(0.8)}
 `
 
 const PostDate = styled.p`
