@@ -12,13 +12,15 @@ const ArticleHeader = styled.header`
   margin-bottom: ${rhythm(0.25)};
 `
 const Header = styled.h2`
-  ${scale(0.7)};
-  margin-bottom: ${rhythm(0.25)};
+  font-size: ${rhythm(1.2)};
+  margin-bottom: ${rhythm(0.8)};
+  line-height: ${rhythm(1.6)};
 `
 
 const Date = styled.p`
-  ${scale(-1 / 8)};
-  margin-bottom: ${rhythm(0.25)};
+  ${scale(-1 / 5)};
+  margin-bottom: ${rhythm(1)};
+  margin-top: ${rhythm(-0.6)};
 `
 
 class Article extends React.Component {
