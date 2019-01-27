@@ -26,7 +26,7 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
   },
 
   '.post code[class*="language-"], .post pre[class*="language-"]': {
-    fontFamily: 'Andale Mono, Ubuntu Mono',
+    fontFamily: 'Andale Mono, Ubuntu Mono, Consolas, Monaco',
   },
 
   '.post :not(pre) > code.language-text': {
