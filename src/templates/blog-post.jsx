@@ -10,6 +10,7 @@ import { DiscussionEmbed } from 'disqus-react'
 
 const StyledMainHeader = styled.h1`
   line-height: ${rhythm(1.75)};
+  margin-bottom: ${rhythm(0.9)}
 `
 
 const PostDate = styled.p`
@@ -23,25 +24,26 @@ const StyledHr = styled.hr`
   margin-bottom: ${rhythm(1)};
 `
 
+const PostContainer = styled.article`
+  padding-bottom: ${rhythm(2)}
+`
+
 const ContentWrapper = styled.div`
   padding-bottom: ${rhythm(1)};
 `
 
 const DisqusWrapper = styled.div`
-  padding: 0 20px;
-  
-  @media (max-width: 500px) {
-    padding: 0;
-  }
+  margin: -0.5rem;
 `
 
-const List = styled.ul`
+const Navigation = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   list-style: none;
   padding: 0;
   margin-left: 0;
+  margin-bottom: 0;
 `
 
 const StyledLink = styled(Link)`
@@ -77,14 +79,14 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        <article>
+        <PostContainer>
           <header>
             <StyledMainHeader>{post.frontmatter.title}</StyledMainHeader>
             <PostDate>{post.frontmatter.date}</PostDate>
           </header>
           <ContentWrapper className='post' dangerouslySetInnerHTML={{ __html: post.html }} />
           <StyledHr />
-          <List>
+          <Navigation>
             <li>
               {previous && (
                 <StyledLink to={previous.fields.slug} rel="prev">
@@ -99,8 +101,8 @@ class BlogPostTemplate extends React.Component {
                 </StyledLink>
               )}
             </li>
-          </List>
-        </article>
+          </Navigation>
+        </PostContainer>
         <DisqusWrapper>
           <DiscussionEmbed shortname={ disqusShortname } config={ disqusConfig } />
         </DisqusWrapper>
