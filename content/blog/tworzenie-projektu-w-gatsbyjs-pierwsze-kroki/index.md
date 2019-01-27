@@ -59,7 +59,7 @@ Przejdźmy do celu dzisiejszego wpisu - stworzenia pierwszej strony w GatsbyJS. 
 Otwórzmy terminal i przejdźmy do folderu w którym chcemy utworzyć nasz pierwszy projekt. W moim przypadku będzie to:
 1. `cd Sites/` przejście z folderu głównego do folderu Sites
 2. `mkdir blog-demo` stworzenie folderu blog-demo
-3. `cd blog-demo/` przejście do nowo folderu blog-demo
+3. `cd blog-demo/` przejście do nowo utworzonego folderu blog-demo
 4. `gatsby new . https://github.com/gatsbyjs/gatsby-starter-hello-world` 
 
 W punkcie 4 nastąpiło utworzenie projektu gatsby w folderze blog-demo (jeżeli chcesz aby gatsby utworzył projekt w dedykowany folderze, zamiast . w poleceniu podaj nazwę jaką ma mieć stworzony folder). Słówko `new` jest komendą gatsby CLI do tworzenia nowego projektu. Adres url podany na końcu komendy wskazuje repozytorium, które przechowuje kod dla naszego startowego projektu. To właśnie dlatego instalowaliśmy gita - gatsby dzięki niemu może klonować wskazane repozytorium z projektem do instalacji. 

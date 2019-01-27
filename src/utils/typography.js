@@ -14,9 +14,8 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
   // code blocks default styles
   '.gatsby-highlight': {
     backgroundColor: `#2d2d2d`,
-    borderRadius: `0.3em`,
     margin: `0.5em 0`,
-    padding: `0.5em`,
+    padding: `0.7em`,
     overflow: `auto`,
   },
 
@@ -26,24 +25,51 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
     overflow: `initial`,
   },
 
-  ':not(pre) > code.language-text': {
-    backgroundColor: `#eee !important`,
+  '.post code[class*="language-"], .post pre[class*="language-"]': {
+    fontFamily: 'Andale Mono, Ubuntu Mono',
+  },
+
+  '.post :not(pre) > code.language-text': {
+    backgroundColor: `#fff`,
     fontWeight: `bold`,
     color: `inherit`,
   },
 
   '.post .gatsby-highlight': {
     wordWrap: `normal`,
-    marginBottom: `1.5rem`,
+    margin: `0 -${typography.rhythm(1)} ${typography.rhythm(1)}`,
+  },
+
+  // imgs inside posts
+  '.post p img': {
+    display: `block`,
+    margin: `0 auto`,
+  },
+
+  // text - font-size, line height
+
+  p: {
+    fontSize: typography.rhythm(0.6),
+    lineHeight: typography.rhythm(1),
+  },
+
+  li: {
+    fontSize: typography.rhythm(0.6),
+    lineHeight: typography.rhythm(1),
+    marginBottom: `calc(${typography.rhythm(0.35)} / 2)`,
   },
 
   //headers default styles
+  h1: {
+    fontSize: typography.rhythm(1.2),
+  },
+
   h2: {
-      fontSize: typography.rhythm(1.1),
+      fontSize: typography.rhythm(0.9),
   },
 
   h3: {
-      fontSize: typography.rhythm(0.9),
+      fontSize: typography.rhythm(0.7),
   }
 })
 
