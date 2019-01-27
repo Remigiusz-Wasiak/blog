@@ -65,11 +65,13 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
   },
 
   h2: {
-      fontSize: typography.rhythm(0.9),
+    fontSize: typography.rhythm(0.9),
+    lineHeight: typography.rhythm(1.1),
   },
 
   h3: {
-      fontSize: typography.rhythm(0.7),
+    fontSize: typography.rhythm(0.7),
+    lineHeight: typography.rhythm(0.9),
   }
 })
 
