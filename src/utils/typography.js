@@ -33,6 +33,7 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
     backgroundColor: `#fff`,
     fontWeight: `bold`,
     color: `inherit`,
+    wordBreak: `break-word`,
   },
 
   '.post .gatsby-highlight': {
