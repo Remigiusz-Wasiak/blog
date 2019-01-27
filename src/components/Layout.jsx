@@ -9,8 +9,9 @@ require("prismjs/plugins/line-numbers/prism-line-numbers.css")
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  max-width: ${rhythm(26)};
-  padding: 0 ${rhythm(3 / 4)};
+  max-width: ${rhythm(27)};
+  padding: 0 ${rhythm(1)};
+  box-shadow: 0px 2px 6px #ddd;
 `
 const Main = styled.main(props => ({
   minHeight: `calc(100vh - ${props.usedHeight}px)`,
