@@ -7,10 +7,6 @@ import SEO from '../components/seo.jsx'
 import { rhythm } from '../utils/typography'
 import styled from 'styled-components'
 
-// const Wrapper = styled.div`
-//   padding: ${rhythm(2)} 0 ${rhythm(1)};
-// `
-
 class OBlogu extends React.Component {
   render() {
     const { data } = this.props
