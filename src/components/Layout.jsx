@@ -23,6 +23,17 @@ const Footer = styled.footer`
   display: flex;
   justify-content: center;
   padding: ${rhythm(0.5)} 0;
+  flex-direction: column;
+  align-items: center;
+`
+
+const FooterCopies = styled.p`
+  margin-bottom: ${rhythm(0.1)};
+`
+
+const FooterInfo = styled.p`
+  font-size: ${rhythm(0.5)};
+  margin-bottom: 0;
 `
 
 class Layout extends React.Component {
@@ -50,7 +61,8 @@ class Layout extends React.Component {
         <Header location={location} getRef={this.getRef} />
         <Main usedHeight={usedHeight}>{children}</Main>
         <Footer ref={el => (this.footer = el)}>
-          © {year} Remigiusz Wasiak
+          <FooterCopies>© {year} Remigiusz Wasiak</FooterCopies>
+          <FooterInfo><a href="/polityk-prywatnosci">Polityka prywatności</a> - <a href="/rss.xml">Subskrybuj RSS</a></FooterInfo>
         </Footer>
       </Wrapper>
     )
