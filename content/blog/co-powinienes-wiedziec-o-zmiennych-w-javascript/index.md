@@ -5,10 +5,10 @@ date: '2019-01-01T13:00:00'
 
 Witam Cię w pierwszym wpisie z serii podstaw JavaScript! W ramach kilkunastu następnych postów poznasz podstawowe kwestie JS, których dobre zrozumienie jest niezbędne, by móc przejść do bardziej zaawansowanych zagadnień. Zachęcam Cię do wnikliwej lektury i zmierzenia się z przygotowanymi przeze mnie zadaniami na końcu.
 
-## Czego się dzisiaj dowiesz?
+### Czego się dzisiaj dowiesz?
 Przeczytasz o tym, jakie są rodzaje zmiennych w JavaScript i co je charakteryzuje. Dowiesz się czym jest blok i napomknę również conieco o obiektach globalnych w kontekście dywagacji o zmiennych. Na końcu czeka Cię quiz i kilka zadań do samodzielnego wykonania. Pamiętaj o tym, że dużo lepsze efekty osiągniesz gdy przetrenujesz materiał, samo czytanie o programowaniu nie przyniesie dużych korzyści.
 
-## Rodzaje zmiennych i bloki
+### Rodzaje zmiennych i bloki
 Być może już wiesz, że w JavaScript do zmiennych możemy przypisać każdą wartość, nie ma podziału na zmienne do przechowywania wyłącznie liczb czy tekstu (na przykład w przeciwieństwie do Javy). Od wersji ECMAScript 2015 wyróżniamy następujące rodzaje zmiennych:
 1. let
 2. const
@@ -20,7 +20,7 @@ Zanim przejdziemy do charakterystyki poszczególnych rodzajów zmiennych warto b
 
 No dobrze, to była mała rozgrzewka, przejdźmy w końcu do głównego tematu - zmiennych. Aj... jeszcze jedno. Wspominałem Ci już, że przykłady które przedstawiam w trakcie omawiania poszczególnych zmiennych możesz przetestować samodzielnie by przekonać się o ich działaniu na własnej skórze? Jeśli nie wiesz jak, w sekcji z pracą domową pokazuję sposób z przeglądarką :) 
 
-### Zmienna let
+#### Zmienna let
 Zmienne deklarowane za pomocą słowa kluczowego **let** charakteryzują się tym, że mogą podlegać zmianom, tzn tej samej zmiennej możemy nadpisywać wartości na inne np.
 ```javascript
 let x = 5;
@@ -79,7 +79,7 @@ Nie wspomniałem o tym wcześniej, ale bloki mogą być w sobie zagnieżdżane, 
 ```
 Możemy zauważyć że `console.log()` umieszczony w drugim bloku zwraca wartość zmiennej `x` zadeklarowanej również w drugim bloku (1), natomiast gdy wyjdziemy poza drugi blok, `console.log()` zwraca wartość zmiennej `x` zadeklarowanej w pierwszym bloku (2). 
 
-### Zmienna const
+#### Zmienna const
 Zmienna **const** w przeciwieństwie do let charakteryzuje się tym, że gdy raz coś do niej przypiszemy, to przypiszemy to na stałe. Nie możemy zmienić przypisania wartości do zmiennej, kiedy to zrobimy otrzymamy nieznany nam jeszcze błąd - zerknij poniżej.
 ```javascript
 const y = 5;
@@ -111,7 +111,7 @@ const noValueAssigned; // Uncaught SyntaxError: Missing initializer in const dec
 ```
 Trzecią cechą **const**, tak jak w przypadku let jest jej zasięg blokowy. W tej kwestii **const** zachowuje się dokładnie tak samo jak let.
 
-### Zmienna var
+#### Zmienna var
 Zmienne let i const zostały wprowadzone dopiero wraz z wdrożeniem wersji ECMAScript 2015, za to zmienna **var** jest dostępna w JavaScript od poczatku jego istnienia. Z tego też względu **var** różni się od swoich następczyń. Wskazane jest by unikać jej używania na rzecz let i const jeżeli projekt na nas tego nie wymusza. Mimo wszystko omówimy sobie cechy charakterystyczne **var**, bo jest bardzo prawdopodobne, że będziesz kiedyś skazany na to by brać ją pod uwagę. 
 
 Zacznijmy więc od pierwszej cechy, którą jest możliwość nadpisywania wartości - podobnie jak w let. W przypadku **var**, możemy nie tylko nadpisać wartość zmiennej, ale również zadeklarować jeszcze raz zmienną o tej samej nazwie. Zerknijmy na kod poniżej.
@@ -168,7 +168,7 @@ example(); // (6)
 ```
 Ten przypadek wygląda z pozoru niewinnie, a w rzeczywistości może stwarzać problemy. Definiujemy funkcję `example` (1) w której zamieszczamy instrukcję warunkową `if` (2) - w warunku `if` umieściłem `true`, żeby blok instrukcji po warunku był wykonany. Wewnątrz bloku poprzedzonego przez `if` deklarujemy zmienną `var x` o wartości `10` (3). Wywołanie funkcji `example()` (6) powoduje wykonanie instrukcji z bloku `if` - `console.log` wyświetla nam wartość `x` czyli `10` (4), a następnie wyświetlana jest w konsoli wartość `x` spoza bloku `if` (5) - jak widzimy, wartość `x` znowu wynosi `10`. Możemy więc powiedzieć, że zmienna var pomimo, że jest zadeklarowana w bloku warunkowym, to jej dostępność ogranicza zakres funkcji, przez co widoczna jest poza blokiem warunkowym. Dowodem na to jest wartość w konsoli (5). Powyższa sytuacja może nie być zawsze na rękę i jest prawdopodobne, że będzie nam kiedyś zależało na tym, aby ograniczyć widoczność zmiennej `x` tylko do zasięgu bloku `if`. Jak to zrobić? Bardzo prosto - np. użyć const zamiast var. A co jeśli nie używamy w projekcie ECMAScript 2015? Cóż, z tego też można wyjść obronną ręką poprzez użycie IIFE, czyli funkcji która jest natychmiastowo wykonywana. Prawdopodobnie napiszę o tym kiedyś w innym wpisie, ale jeżeli już chciałbyś wiedzieć o co chodzi to odsyłam do wujka google, z pewnością znajdziesz odpowiedź :)
 
-## Obiekt globalny
+### Obiekt globalny
 Warto wspomnieć o jeszcze jednej cesze zmiennych w JavaScript, którą jest przynależność (lub jej brak) do własności obiektu globalnego - dla przeglądarki będzie to obiekt `window`. Nie chcę się rozwodzić teraz nad tym czym jest obiekt globalny, na ten moment po prostu przyjmijmy, że taki istnieje i dobrze jest o tym wiedzieć.
 O co chodzi? Zacznijmy od zmiennej var:
 Jeżeli zdefiniujemy zmienną var poza jakąkolwiek funkcją, zmienna ta zostanie przypisana do właności obiektu globalnego. Zerknijmy na przykład poniżej:
@@ -193,12 +193,12 @@ console.log('outerLet:', window.outerLet); // outerLet: undefined
 console.log('outerConst:', window.outerConst); // outerConst: undefined
 ```
 
-## Kiedy używać poszczególnych rodzajów zmiennych?
+### Kiedy używać poszczególnych rodzajów zmiennych?
 Zacznijmy od var - jeżeli w projekcie nad którym pracujesz używasz ECMAScript 2015 to o używaniu var możesz całkowicie zapomnieć. Są podobno wyjątkowe sytuacje, w których użycie var jest zasadne ale na chwilę obecną nie mam przykładów by to wyjaśnić.
 
 Co w takim razie z const i let. Kiedy używać pierwszego, a kiedy drugiego? Zalecenie ogólne jest takie, aby let używać tylko wtedy kiedy nie można użyć const - czyli wtedy gdy zmienna będzie zmieniać przypisanie wartości. Jednakże tutaj pojawia się też trochę inny punkt widzenia - w zasadzie to nie wykluczający całkowicie poprzedniego. Const ma służyć przede wszystkim poprawie czytelności kodu - używajmy go wtedy, gdy chcemy zasygnalizować innym osobom czytającym nasz kod, że dana zmienna jest z założenia stałą i nie może się zmieniać.
 
-## Praca własna
+### Praca własna
 Praktyka jest ważniejsza od teorii, zachęcam Cię do poeksperymentowania ze zmiennymi by utrwalić sobie zasady ich działania. Zrób poniższe ćwiczenia i zastanów się (szukając ew. odpowiedzi w tym poście) czemu otrzymujesz taki a nie inny wynik. 
 
 Wszystkie ćwiczenia możesz wykonywać w konsoli swojej przeglądarki. W zależności od tego z jakiej przeglądarki korzystasz, konsolę możesz uruchomić w następujący sposób:
@@ -263,7 +263,7 @@ console.log('global object after let loop:', window.j); // (3)
 ```
 Jak zmieniła się wartość własności globalnego obiektu `window` w przypadku `i` (1), po przejściu pętli `for` ze zmienną **var** (2)? A jak to przebiegło w przypadku `j` po przejściu pętli ze zmienną **let** (3)? Dlaczego tak się zadziało?
 
-## Bibliografia
+### Bibliografia
 1. Rauschamyer Axel, "JavaScript For Impatient Programmers", Chapter 9 Variables and assignment
 2. Simpson Kyle, "You Don't Know JS: Up & Going", Chapter 1: Into Programming, [link](https://github.com/getify/You-Dont-Know-JS/blob/master/up%20%26%20going/ch1.md#variables)
 3. Simpson Kyle, "You Don't Know JS: ES6 & Beyond", Chapter 2: Syntax, [link](https://github.com/getify/You-Dont-Know-JS/blob/master/es6%20%26%20beyond/ch2.md) 
