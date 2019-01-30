@@ -8,7 +8,7 @@ import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
 import { DiscussionEmbed } from 'disqus-react'
 
-const StyledMainHeader = styled.h1`
+const StyledMainHeader = styled.h2`
   line-height: ${rhythm(1.6)};
   margin-bottom: ${rhythm(0.8)}
 `

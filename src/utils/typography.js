@@ -61,18 +61,21 @@ bootstrapTheme.overrideThemeStyles = (options, styles) => ({
   },
 
   //headers default styles
-  h1: {
-    fontSize: typography.rhythm(1.2),
-  },
-
   h2: {
-    fontSize: typography.rhythm(0.9),
-    lineHeight: typography.rhythm(1.1),
+    fontSize: typography.rhythm(1.1),
   },
 
   h3: {
-    fontSize: typography.rhythm(0.7),
+    fontSize: typography.rhythm(0.95),
+    lineHeight: typography.rhythm(1.1),
+    marginBottom: typography.rhythm(0.9),
+    marginTop: typography.rhythm(2),
+  },
+
+  h4: {
+    fontSize: typography.rhythm(0.75),
     lineHeight: typography.rhythm(0.9),
+    marginBottom: typography.rhythm(0.75),
   }
 })
 
