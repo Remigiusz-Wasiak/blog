@@ -12,7 +12,7 @@ const ArticleHeader = styled.header`
   margin-bottom: ${rhythm(0.25)};
 `
 const Header = styled.h2`
-  font-size: ${rhythm(1.2)};
+  font-size: ${rhythm(1.1)};
   margin-bottom: ${rhythm(0.8)};
   line-height: ${rhythm(1.6)};
 `
