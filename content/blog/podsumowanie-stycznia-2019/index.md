@@ -3,7 +3,7 @@ title: Podsumowanie stycznia 2019
 date:  '2019-01-30'
 ---
 
-Pora na podsumowanie stycznia 2019. Działo się sporo, blog nabrał kształtu, doszło trochę nowych funkcjonalności, ale również nie obyło się bez wypadków. Zapraszam Cię do dalszej lektury.
+Pora na podsumowanie stycznia 2019. Działo się sporo, blog nabrał trochę nowych kształtów i doszło parę nowych funkcjonalności. Nie obyło się również bez wypadków, które trochę zabolały. Na samym końcu przedstawiam również statystyki po pierwszym miesiącu funkcjonowania bloga. Zapraszam Cię do dalszej lektury.
 
 ### Co udało się zrobić?
 Styczeń to przede wszystkim start mojego bloga. Postanowiłem wystartować z na prawdę minimalną wersją strony, by móc później dokumentować kolejne etapy jej ulepszania. A więc co przez cały styczeń udało się dodać / zmienić? 
