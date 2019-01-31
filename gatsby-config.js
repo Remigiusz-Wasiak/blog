@@ -88,6 +88,7 @@ module.exports = {
         displayName: false,
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-netlify`, // must be last in the array (common bug)
       options: {
