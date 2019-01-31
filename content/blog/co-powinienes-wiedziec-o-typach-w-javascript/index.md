@@ -3,7 +3,7 @@ title: Co powinieneś wiedzieć o typach w JavaScript?
 date: '2019-01-26'
 ---
 
-Co ma wspólnego dziecko trzymające balonik wypełniony helem z obiektami w JavaScript? Jakie wyróżniamy typy w JavaScript i czym się one charakteryzują? Odpowiedź na te pytania poznasz w dzisiejszym wpisie, który jest kontynuacją serii o podstawach JavaScript. Zapraszam do dalszego czytania.
+Co ma wspólnego dziecko trzymające balonik wypełniony helem z obiektami w JavaScript? Jakie wyróżniamy typy w JavaScript i czym się one charakteryzują? Odpowiedź na te i inne pytania poznasz w dzisiejszym wpisie, który jest kontynuacją serii o podstawach JavaScript. Zapraszam do dalszego czytania.
 
 ### Czego się dzisiaj dowiesz?
 W poprzednim wpisie z tej serii poznawaliśmy rodzaje zmiennych, różnice między nimi oraz ich zastosowania. Wiesz już, że w JavaScript zmienne nie mają typów i możesz do nich przypisać każdą wartość. Dlatego to właśnie wartości w JavaScript mają typy (mówimy, że dana wartość jest określonego typu), a dzisiejszy wpis ma za zadanie naświetlić Ci ich rodzaje i charakterystykę. Postaram się również zestawić ze sobą rodzaje typów aby łatwiej było Ci dostrzec najważniejsze różnice między nimi. Na sam koniec, zachęcam Cię do zmierzenia się z zadaniami jakie dla Ciebie przygotowałem. Pomogą Ci one utrwalić poznane dzisiaj zagadnienia.
