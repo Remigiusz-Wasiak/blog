@@ -1,5 +1,5 @@
-import 'typeface-montserrat'
-import 'typeface-merriweather'
+require('typeface-montserrat')
+require('typeface-merriweather')
 require("prismjs/themes/prism-tomorrow.css")
 
 exports.onServiceWorkerUpdateReady = () => {
