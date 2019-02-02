@@ -90,20 +90,12 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-netlify`, // must be last in the array (common bug)
+      resolve: 'gatsby-plugin-robots-txt',
       options: {
-        headers: {
-          "/*.js": [
-            'cache-control: public, max-age=31536000, immutable'
-          ],
-          "/*.css": [
-            'cache-control: public, max-age=31536000, immutable'
-          ],
-          "/sw.js": [
-            'cache-control: public, max-age=0, must-revalidate'
-          ],
-        }
-      }
-    }
+        host: 'https://www.remigiuszwasiak.pl',
+        sitemap: 'https://www.remigiuszwasiak.pl/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: '/polityka-prywatnosci' }],
+      },
+    },
   ],
 }
