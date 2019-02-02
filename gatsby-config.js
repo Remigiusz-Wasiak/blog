@@ -90,6 +90,14 @@ module.exports = {
     },
     `gatsby-plugin-sitemap`,
     {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.remigiuszwasiak.pl',
+        sitemap: 'https://www.remigiuszwasiak.pl/sitemap.xml',
+        policy: [{ userAgent: '*', disallow: '/polityka-prywatnosci' }],
+      },
+    },
+    {
       resolve: `gatsby-plugin-netlify`, // must be last in the array (common bug)
       options: {
         headers: {
