@@ -2,7 +2,7 @@
 title: Typy proste w JavaScript - string
 date: '2019-02-09'
 ---
-Jest to trzeci wpis z serii podstaw JavaScript! Dzisiaj zagłębiamy się bardziej w temat dotyczący typu prostego string. Poznasz podstawowe zagadnienia związane z tym typem oraz zobaczysz przykładowe operacje jaki można na nim wykonać. Zachęcam Cię również bardzo do przerobienia zadań jakie przygotowałem dla Ciebie na końcu wpisu.
+Jest to trzeci wpis z serii podstaw JavaScript! Dzisiaj zagłębiamy się bardziej w temat dotyczący typu prostego string. Poznasz podstawowe zagadnienia związane z tym typem oraz zobaczysz przykładowe operacje jakie można na nim wykonywać. Zachęcam Cię również bardzo do przerobienia zadań które przygotowałem dla Ciebie na końcu wpisu.
 
 ### Co powinieneś już wiedzieć?
 Jeżeli nie czytałeś jeszcze wcześniejszych wpisów z serii, to zachęcam Cię być zaczął od nich. Od tego momentu zakładam, że wiesz już jakie mamy [rodzaje zmiennych](/co-powinienes-wiedziec-o-zmiennych-w-javascript/), czym różnią się od siebie var, let i const. Znasz też podstawowy [podział typów](/co-powinienes-wiedziec-o-typach-w-javascript/) oraz ich charakterystykę.
