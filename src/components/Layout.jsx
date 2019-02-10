@@ -62,7 +62,7 @@ class Layout extends React.Component {
         <Main usedHeight={usedHeight}>{children}</Main>
         <Footer ref={el => (this.footer = el)}>
           <FooterCopies>© {year} Remigiusz Wasiak</FooterCopies>
-          <FooterInfo><a href="/polityka-prywatnosci">Polityka prywatności</a> - <a href="/rss.xml">Subskrybuj RSS</a></FooterInfo>
+          <FooterInfo><a href="/polityka-prywatnosci">Polityka prywatności</a> - <a href="/rss.xml">Subskrybuj RSS</a> - <a href="https://www.bloglovin.com/blog/19798443/?claim=2ztt93745nh">Bloglovin'</a></FooterInfo>
         </Footer>
       </Wrapper>
     )
