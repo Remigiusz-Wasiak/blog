@@ -30,15 +30,12 @@ class OBlogu extends React.Component {
             odpowiedzi na któreś z poniższych pytań:
           </p>
           <ul>
+            <li>Czy programowanie jest dla mnie?</li>
             <li>Jak uczyć się programowania?</li>
             <li>Jak planować naukę i projekty?</li>
             <li>Gdzie szukać wartościowych źródeł do nauki programowania?</li>
-            <li>Czy programowanie jest dla mnie?</li>
+            <li>Jak zdobyć pierwszą pracę jako programista po przebranżowieniu?</li>
             <li>Jak prowadzić swój rozwój zawodowy?</li>
-            <li>
-              Jak zdobyć pierwszą pracę jako programista po przebranżowieniu?
-            </li>
-            <li>Gdzie szukać ciekawostek na temat JavaScript?</li>
           </ul>
 
           <p>
