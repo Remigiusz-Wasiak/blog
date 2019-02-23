@@ -1,14 +1,24 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
-import Bio from '../components/Bio'
+import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import MainPagination from '../components/Pagination/MainPagination'
 import SEO from '../components/seo'
-import { rhythm } from '../utils/typography'
 import Article from '../components/Article/Article'
-import styled from 'styled-components'
 
 class BlogIndex extends React.Component {
+
+  constructor() {
+    super()
+
+    this.getArticleData.bind(this)
+  }
+
+  getArticleData(node, data) {
+    return data.allMarkdownRemark.edges.find((el) => {
+      return el.node.id === node.id
+    });
+  }
+
   render() {
     const { data, pageContext } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -17,11 +27,12 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={ this.props.location } title={ siteTitle }>
         <SEO title="Strona główna" />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
+        { posts.map(({ node }) => {
+          const articleData = this.getArticleData(node, data);
+          const title = articleData.node.frontmatter.title || node.fields.slug
 
-          return <Article node={ node } key={ title } />
-        })}
+          return <Article articleData={ articleData } key={ title } />
+        }) }
         <MainPagination data={ pageContext } />
       </Layout>
     )
@@ -35,6 +46,28 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            date(formatString: "DD-MM-YYYY")
+            heroImg {
+              childImageSharp {
+                fluid(maxWidth: 648) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+          excerpt(pruneLength: 230)
+        }
       }
     }
   }

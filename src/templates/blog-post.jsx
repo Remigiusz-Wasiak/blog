@@ -1,22 +1,21 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-
-import Bio from '../components/Bio'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
 import { DiscussionEmbed } from 'disqus-react'
+import Img from 'gatsby-image'
 
 const StyledMainHeader = styled.h2`
   line-height: ${rhythm(1.6)};
-  margin-bottom: ${rhythm(0.8)}
+  margin-bottom: ${rhythm(0.5)}
 `
 
 const PostDate = styled.p`
   ${scale(-1 / 5)};
   display: block;
-  margin-bottom: ${rhythm(1)};
+  margin-bottom: ${rhythm(0.3)};
   margin-top: ${rhythm(-0.6)};
 `
 
@@ -52,7 +51,7 @@ const StyledLink = styled(Link)`
 `
 
 const NavText = styled.span`
-  ${scale(-1 / 5)}
+  ${scale(-1 / 5)};
   display: inline-block;
   max-width: 150px;
   white-space: nowrap;
@@ -64,10 +63,16 @@ const NavText = styled.span`
   }
 `
 
+const StyledPostImg = styled(Img)`
+  margin: 0 -${rhythm(1)} ${rhythm(1)};
+`
+
 class BlogPostTemplate extends React.Component {
   render() {
-    const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const { data } = this.props
+    const post = data.markdownRemark
+    const sizes = data.markdownRemark.frontmatter.heroImg ? data.markdownRemark.frontmatter.heroImg.childImageSharp.fluid : null
+    const siteTitle = data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     const disqusShortname = 'remigiusz-wasiak-blog'
     const disqusConfig = {
@@ -84,6 +89,11 @@ class BlogPostTemplate extends React.Component {
             <StyledMainHeader>{post.frontmatter.title}</StyledMainHeader>
             <PostDate>{post.frontmatter.date}</PostDate>
           </header>
+          { sizes && (
+            <StyledPostImg
+              sizes={ sizes }
+            />
+          )}
           <ContentWrapper className='post' dangerouslySetInnerHTML={{ __html: post.html }} />
           <StyledHr />
           <Navigation>
@@ -129,6 +139,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "DD-MM-YYYY")
+        heroImg {
+          childImageSharp {
+            fluid(maxWidth: 648) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

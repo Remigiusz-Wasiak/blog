@@ -1,6 +1,7 @@
 ---
 title: Typy proste w JavaScript - string
 date: '2019-02-09'
+heroImg: './hero_string_3.png'
 ---
 Jest to trzeci wpis z serii podstaw JavaScript! Dzisiaj zagłębiamy się bardziej w temat dotyczący typu prostego string. Poznasz podstawowe zagadnienia związane z tym typem oraz zobaczysz przykładowe operacje jakie można na nim wykonywać. Zachęcam Cię również bardzo do przerobienia zadań które przygotowałem dla Ciebie na końcu wpisu.
 

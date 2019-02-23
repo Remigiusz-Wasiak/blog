@@ -17,11 +17,11 @@ exports.createPages = ({ graphql, actions }) => {
             ) {
               edges {
                 node {
+                  id
                   fields {
                     slug
                   }
                   frontmatter {
-                    date(formatString: "DD-MM-YYYY")
                     title
                   }
                   excerpt(pruneLength: 230)
