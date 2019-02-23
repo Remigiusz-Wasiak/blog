@@ -5,7 +5,7 @@ module.exports = {
     description: `Blog o programowaniu w JavaScript. Wykorzystanie JavaScript w praktyce. Sposoby na skuteczną naukę programowania.`,
     siteUrl: `https://remigiuszwasiak.pl`,
     social: {
-      twitter: `er_wasiak`,
+      twitter: `@er_wasiak`,
     },
   },
   plugins: [
