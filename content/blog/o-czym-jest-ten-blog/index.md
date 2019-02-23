@@ -3,7 +3,7 @@ title: O czym jest ten blog?
 date: '2019-01-01T12:00:00'
 ---
 
-Cześć! Nazywam się Remigiusz Wasiak i miło mi powitać Cię na moim blogu o porgramowaniu w JavaScript. Tworzę go dla siebie i Ciebie. Dla mnie jest on sposobem na usystematyzowanie mojej obecnej wiedzy oraz na zdobywanie nowej. Dla Ciebie może być wartościowym (mam nadzieję) źródłem do nauki, obserwacji innych i wyciągania wniosków.
+Cześć! Nazywam się Remigiusz Wasiak i miło mi powitać Cię na moim blogu o programowaniu w JavaScript. Tworzę go dla siebie i Ciebie. Dla mnie jest on sposobem na usystematyzowanie mojej obecnej wiedzy oraz na zdobywanie nowej. Dla Ciebie może być wartościowym (mam nadzieję) źródłem do nauki, obserwacji innych i wyciągania wniosków.
 
 ### O czym dokładniej będziesz mógł poczytać na tym blogu?
 Na samym początku bloga rozpoczynam 2 serie postów. Pierwsza o podstawach JavaScript, a druga o technikaliach rozwoju tego bloga - jak zapewne widzisz, wygląda on póki co bardzo "surowo".
