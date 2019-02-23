@@ -88,6 +88,7 @@ class BlogPostTemplate extends React.Component {
              description={post.excerpt}
              meta={[
                {name: 'og:image', content: `${imageSrc}`},
+               {name: 'twitter:card', content: 'summary_large_image'},
                {name: 'twitter:image', content: `${imageSrc}`},
                {name: 'og:image:width', content: '648'},
                {name: 'og:image:height', content: '312'}]}/>
