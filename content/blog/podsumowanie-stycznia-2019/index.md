@@ -1,6 +1,7 @@
 ---
 title: Podsumowanie stycznia 2019
 date:  '2019-01-30'
+heroImg: './hero_summary.png'
 ---
 
 Pora na podsumowanie stycznia 2019. Działo się sporo, blog nabrał trochę nowych kształtów i doszło parę nowych funkcjonalności. Nie obyło się również bez wypadków, które trochę zabolały. Na samym końcu przedstawiam również statystyki po pierwszym miesiącu funkcjonowania bloga. Zapraszam Cię do dalszej lektury.

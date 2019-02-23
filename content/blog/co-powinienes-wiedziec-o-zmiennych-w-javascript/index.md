@@ -1,6 +1,7 @@
 ---
 title: Co powinieneś wiedzieć o zmiennych w JavaScript?
 date: '2019-01-01T13:00:00'
+heroImg: './hero_variables.png'
 ---
 
 Witam Cię w pierwszym wpisie z serii podstaw JavaScript! W ramach kilkunastu następnych postów poznasz podstawowe kwestie JS, których dobre zrozumienie jest niezbędne, by móc przejść do bardziej zaawansowanych zagadnień. Zachęcam Cię do wnikliwej lektury i zmierzenia się z przygotowanymi przeze mnie zadaniami na końcu.
