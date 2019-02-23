@@ -41,7 +41,7 @@ function SEO({ description, lang, meta, keywords, title }) {
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: data.site.siteMetadata.social.twitter,
               },
               {
                 name: `twitter:title`,
@@ -94,6 +94,9 @@ const detailsQuery = graphql`
         title
         description
         author
+        social { 
+          twitter
+        }
       }
     }
   }
