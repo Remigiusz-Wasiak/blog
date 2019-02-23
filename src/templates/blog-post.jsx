@@ -84,7 +84,13 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} meta={[{name: 'og:image', content: `${imageSrc}`}]}/>
+        <SEO title={post.frontmatter.title}
+             description={post.excerpt}
+             meta={[
+               {name: 'og:image', content: `${imageSrc}`},
+               {name: 'twitter:image', content: `${imageSrc}`},
+               {name: 'og:image:width', content: '648'},
+               {name: 'og:image:height', content: '312'}]}/>
         <PostContainer>
           <header>
             <StyledMainHeader>{post.frontmatter.title}</StyledMainHeader>
