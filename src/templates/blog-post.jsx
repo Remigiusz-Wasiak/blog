@@ -72,6 +72,7 @@ class BlogPostTemplate extends React.Component {
     const { data } = this.props
     const post = data.markdownRemark
     const sizes = data.markdownRemark.frontmatter.heroImg ? data.markdownRemark.frontmatter.heroImg.childImageSharp.fluid : null
+    const imageSrc = sizes ? sizes.src : ''
     const siteTitle = data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
     const disqusShortname = 'remigiusz-wasiak-blog'
@@ -83,7 +84,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO title={post.frontmatter.title} description={post.excerpt} meta={[{name: 'og:image', content: `${imageSrc}`}]}/>
         <PostContainer>
           <header>
             <StyledMainHeader>{post.frontmatter.title}</StyledMainHeader>
