@@ -14,7 +14,7 @@ class PolitykaPrywatnosci extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="Polityka prywatności" />
+        <SEO title="Polityka prywatności" meta={[{name: 'robots', content: 'noindex, nofollow'}]}/>
         <div>
           <h2>Polityka prywatności</h2>
           <h3>1. Administrator danych</h3>

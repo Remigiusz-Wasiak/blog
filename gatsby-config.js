@@ -88,7 +88,12 @@ module.exports = {
         displayName: false,
       },
     },
-    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        exclude: [`/polityka-prywatnosci`],
+      },
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
