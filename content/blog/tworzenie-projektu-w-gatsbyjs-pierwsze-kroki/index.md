@@ -1,6 +1,7 @@
 ---
 title: Tworzenie projektu w GatsbyJS - pierwsze kroki
 date: '2019-01-12T17:00:00'
+heroImg: './hero_gatsby.png'
 ---
 
 Jest to pierwszy post z serii o dokumentowaniu powstawania bloga. Dzisiaj opowiem Ci czym są strony statyczne i dynamiczne oraz dlaczego wybrałem właśnie GatsbyJS do budowy mojego bloga. Przygotujemy również odpowiednie środowisko do pracy, uruchomimy pierwszy projekt, a także przyjrzymy się dostępnym starterom do wybrania. 
