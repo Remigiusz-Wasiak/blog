@@ -7,6 +7,8 @@ heroImg: './hero_gatsby_blog.png'
 Czym jest GatsbyJS mogłeś dowiedzieć się w [poprzednim wpisie](/tworzenie-projektu-w-gatsbyjs-pierwsze-kroki/#czym-jest-gatsbyjs) z tej serii. Dzisiaj zajrzymy bardziej do jego środka i przeanalizujemy jak działa oraz co oferuje nam starter bloga od którego zaczniemy budowę naszej platformy. Zapraszam do dalszej lektury.
 
 ### Instalacja startera gatsby-starter-blog
+Jeżeli nie czytałeś poprzedniego wpisu z tej serii, to w [tym miejscu](https://www.remigiuszwasiak.pl/tworzenie-projektu-w-gatsbyjs-pierwsze-kroki/#gatsbyjs-startery) opisuję, dlaczego zdecydowałem się akurat na ten, a nie inny starter.
+
 Proces instalacji rozpoczniemy poprzez przejście do repozytorium w którym znajduje się wspomniany wcześniej starter. Możesz go znaleźć pod [tym adresem](https://github.com/gatsbyjs/gatsby-starter-blog).
 Następnie wykonujemy następujące kroki.
 
