@@ -74,6 +74,7 @@ class BlogPostTemplate extends React.Component {
     const sizes = data.markdownRemark.frontmatter.heroImg ? data.markdownRemark.frontmatter.heroImg.childImageSharp.fluid : null
     const imageSrc = sizes ? sizes.src : ''
     const siteTitle = data.site.siteMetadata.title
+    const { siteUrl } =  data.site.siteMetadata
     const { previous, next } = this.props.pageContext
     const disqusShortname = 'remigiusz-wasiak-blog'
     const disqusConfig = {
@@ -87,9 +88,9 @@ class BlogPostTemplate extends React.Component {
         <SEO title={post.frontmatter.title}
              description={post.excerpt}
              meta={[
-               {name: 'og:image', content: `${imageSrc}`},
+               {name: 'og:image', content: `${siteUrl}${imageSrc}`},
                {name: 'twitter:card', content: 'summary_large_image'},
-               {name: 'twitter:image', content: `${imageSrc}`},
+               {name: 'twitter:image', content: `${siteUrl}${imageSrc}`},
                {name: 'og:image:width', content: '648'},
                {name: 'og:image:height', content: '312'}]}/>
         <PostContainer>
@@ -138,6 +139,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     markdownRemark(fields: { slug: { eq: $slug } }) {
