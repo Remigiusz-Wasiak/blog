@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
+import Tags from '../components/Tags/Tags'
 import { rhythm, scale } from '../utils/typography'
 import styled from 'styled-components'
 import { DiscussionEmbed } from 'disqus-react'
@@ -72,6 +73,7 @@ class BlogPostTemplate extends React.Component {
     const { data } = this.props
     const post = data.markdownRemark
     const sizes = data.markdownRemark.frontmatter.heroImg ? data.markdownRemark.frontmatter.heroImg.childImageSharp.fluid : null
+    const tags = data.markdownRemark.frontmatter.tags ? data.markdownRemark.frontmatter.tags : null
     const imageSrc = sizes ? sizes.src : ''
     const siteTitle = data.site.siteMetadata.title
     const { siteUrl } =  data.site.siteMetadata
@@ -104,6 +106,7 @@ class BlogPostTemplate extends React.Component {
             />
           )}
           <ContentWrapper className='post' dangerouslySetInnerHTML={{ __html: post.html }} />
+          <Tags tags={tags} />
           <StyledHr />
           <Navigation>
             <li>
@@ -125,7 +128,6 @@ class BlogPostTemplate extends React.Component {
         <DisqusWrapper>
           <DiscussionEmbed shortname={ disqusShortname } config={ disqusConfig } />
         </DisqusWrapper>
-
       </Layout>
     )
   }
@@ -156,6 +158,7 @@ export const pageQuery = graphql`
             }
           }
         }
+        tags
       }
     }
   }
