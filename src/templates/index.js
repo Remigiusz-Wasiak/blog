@@ -10,10 +10,10 @@ class BlogIndex extends React.Component {
   constructor() {
     super()
 
-    this.getArticleData.bind(this)
+    this.getPaginatedArticleData.bind(this)
   }
 
-  getArticleData(node, data) {
+  getPaginatedArticleData(node, data) {
     return data.allMarkdownRemark.edges.find((el) => {
       return el.node.id === node.id
     });
@@ -28,7 +28,7 @@ class BlogIndex extends React.Component {
       <Layout location={ this.props.location } title={ siteTitle }>
         <SEO title="Strona główna" />
         { posts.map(({ node }) => {
-          const articleData = this.getArticleData(node, data);
+          const articleData = this.getPaginatedArticleData(node, data);
           const title = articleData.node.frontmatter.title || node.fields.slug
 
           return <Article articleData={ articleData } key={ title } />
@@ -58,6 +58,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "DD-MM-YYYY")
+            tags
             heroImg {
               childImageSharp {
                 fluid(maxWidth: 648) {
