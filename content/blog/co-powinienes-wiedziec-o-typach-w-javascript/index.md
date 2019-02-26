@@ -2,6 +2,7 @@
 title: Co powinieneś wiedzieć o typach w JavaScript?
 date: '2019-01-26'
 heroImg: './hero_types.png'
+tags: ['javascript', 'posty techniczne', 'podstawy javascript']
 ---
 
 Co ma wspólnego dziecko trzymające balonik wypełniony helem z obiektami w JavaScript? Jakie wyróżniamy typy w JavaScript i czym się one charakteryzują? Odpowiedź na te pytania poznasz w dzisiejszym wpisie, który jest kontynuacją serii o podstawach JavaScript. Zapraszam do dalszego czytania.

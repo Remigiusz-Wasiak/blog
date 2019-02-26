@@ -2,6 +2,7 @@
 title: Tworzymy prototyp bloga w GatsbyJS
 date: '2019-02-23'
 heroImg: './hero_gatsby_blog.png'
+tags: ['gatsbyjs', 'changeblog', 'posty techniczne', 'javascript']
 ---
 
 Czym jest GatsbyJS mogłeś dowiedzieć się w [poprzednim wpisie](/tworzenie-projektu-w-gatsbyjs-pierwsze-kroki/#czym-jest-gatsbyjs) z tej serii. Dzisiaj zajrzymy bardziej do jego środka i przeanalizujemy jak działa oraz co oferuje nam starter bloga od którego zaczniemy budowę naszej platformy. Zapraszam do dalszej lektury.
