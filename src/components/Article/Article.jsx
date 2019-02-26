@@ -18,7 +18,7 @@ const ArticleHeader = styled.header`
   align-items: flex-start;
   justify-content: space-between;
   
-  @media(max-width: 535px) {styles
+  @media(max-width: 535px) {
     flex-direction: column;
   }
 `
