@@ -26,7 +26,7 @@ console.log(0b11001);; // 25
 console.log(0o31); // 25
 // zapis dziesiętny
 console.log(25); // 25
-// zapis szesnastkowy poprzedzone przez 0x
+// zapis szesnastkowy poprzedzony przez 0x
 console.log(0x19); // 25
 ```
 Jeżeli chciałbyś nauczyć się konwertowania liczb z jednego systemu na drugi to polecam film na YT Mirosława Zelenta [poruszający ten temat](https://www.youtube.com/watch?v=VUHwfugYFEA).
@@ -38,7 +38,7 @@ console.log(pi); // 3.14 (1)
 const longDecimal = 3e-6;
 console.log(longDecimal); // 0.000003 (2)
 ```
-Liczba po e jest wykładnikiem potęgi o podstawie 10. W przypadki `pi` było to 0.314 * 10^1 co daje nam `3.14` (1), a w przypadku `longDecimal` będzie to 3 * 10^-6 czyli `0.000003` (2).
+Liczba po e jest wykładnikiem potęgi o podstawie 10. W przypadku `pi` było to 0.314 * 10^1 co daje nam `3.14` (1), a w przypadku `longDecimal` będzie to 3 * 10^-6 czyli `0.000003` (2).
 
 #### Operacje arytmetyczne
 W JavaScript mamy możliwość wykonywania różnych operacji arytmetycznych z użyciem dedykowanych operatorów.
@@ -71,7 +71,7 @@ console.log(isOdd(3)); // true
 console.log(isBetterOdd(-3)); // true
 console.log(isBetterOdd(3)); // true
 ```
-Różnica między dwoma funkcjami polega na tym, że pierwsza zwraca bezpośrednio wartość reszty z dzielenia przez 2 (1) i porównuje ją z jedynką (każda liczba nieparzysta podzielona przez 2 ma resztę z dzielenia równą 1), a druga wyciąga wartość bezwzględną przed przyrównaniem do jedynki (2). W efekcie, funkcja `isBetterOdd` działa poprawnie dla każdej liczby, a funkcja `isOdd` zwraca poprawne wyniki tylko dla liczb dodatnich - zdecydowanie bardziej interesuje nas to pierwsze rozwiązanie!
+Różnica między dwoma funkcjami polega na tym, że pierwsza zwraca bezpośrednio wartość reszty z dzielenia przez 2 (1) i porównuje ją z jedynką (każda liczba nieparzysta podzielona przez 2 ma resztę z dzielenia równą 1), a druga wyciąga wartość bezwzględną przed przyrównaniem do jedynki (2). W efekcie, funkcja `isOdd` zwraca poprawne wyniki tylko dla liczb dodatnich, a funkcja `isBetterOdd` działa poprawnie dla każdej liczby - zdecydowanie bardziej interesuje nas to drugie rozwiązanie!
 
 Oprócz wspomnianych wcześniej operatorów matematycznych, znanych wszystkim chociażby z lekcji matematyki w szkole, JavaScript oferuje dodatkowe operatory, które możemy używać wraz z liczbami. Są nimi operatory inkrementacji `++` i dekrementacji `--`. Spójrzmy na przykład poniżej.
 ```javascript
@@ -105,7 +105,7 @@ console.log(typeof (a - b)) // number (2)
 console.log(a + b); // 104 (3)
 console.log(typeof (a + b)); // string (4)
 ```
-Co tam się zadziało! Prześledźmy wszystko po kolei. Zainicjowaliśmy zmienną `a` wartością typu number `10`, natomiast zmienną `b` wartością typu string `'4'`. Następnie wykonujemy operację odejmowania, a jej wynik wyświetlamy w konsoli (1). Zmienna `b` została skonwertowana do typu number, dzięki czemu możliwe było przeprowadzenie operacji odejmowania. W kolejnej linii sprawdziliśmy typ zwracanego wyniku, który tak jak się spodziewaliśmy jest liczbą (2). Wszystko byłoby pięknie gdyby nie kolejne linijki. Wynikiem dodawania `a + b`, który pokazał nam się w konsoli jest ... `104` (3).  10 + 4 = 104?! W kolejnej linii sprawdziliśmy typ zwracanego wyniku i okazuje się, że jest to ciąg znaków, a nie liczba (4). Niestety, jest to efekt tego, że znak + jest w JavaScript operatorem dodawania i jednocześnie służy do konkatenacji stringów, o czym mieliście możliwość przekonać się w [poprzednim wpisie](/typy-proste-w-javascript-string/#łączenie-stringów) z tej serii. W przypadku lini (3), wartość zmiennej `a` została skonwertowana na typ string i dołączona do zmiennej `b`. `10` zostało dołączone do `4` stąd wynik typu string `104`. Chodziło nam o coś zupełnie innego, więc jak inaczej konwertować liczby by można było wykonać bezpiecznie operację dodawania?
+Co tam się zadziało! Prześledźmy wszystko po kolei. Zainicjowaliśmy zmienną `a` wartością typu number `10`, natomiast zmienną `b` wartością typu string `'4'`. Następnie wykonujemy operację odejmowania, a jej wynik wyświetlamy w konsoli (1). Zmienna `b` została skonwertowana do typu number, dzięki czemu możliwe było przeprowadzenie operacji odejmowania. W kolejnej linii sprawdziliśmy typ zwracanego wyniku, który tak jak się spodziewaliśmy jest liczbą (2). Wszystko byłoby pięknie gdyby nie kolejne linijki. Wynikiem dodawania `a + b`, który pokazał nam się w konsoli jest ... `104` (3).  10 + 4 = 104?! W kolejnej linii sprawdziliśmy typ zwracanego wyniku i okazuje się, że jest to ciąg znaków, a nie liczba (4). Niestety, jest to efekt tego, że znak + jest w JavaScript operatorem dodawania i jednocześnie służy do konkatenacji stringów, o czym mieliście możliwość przekonać się w [poprzednim wpisie](/typy-proste-w-javascript-string/#łączenie-stringów) z tej serii. W przypadku lini (3), wartość zmiennej `a` została skonwertowana na typ string i dołączona do zmiennej `b`. `10` zostało dołączone do `4` stąd wynik typu string `104`. Chodziło nam o coś zupełnie innego, więc jak inaczej konwertować na typ number by można było wykonać bezpiecznie operację dodawania?
 
 Konwertowanie na typ number możemy wymusić "ręcznie" 😉. Możemy to zrobić na kilka sposobów.
 ```javascript
@@ -127,7 +127,7 @@ W JavaScript występują 2 wartości, które są typu number, ale zwracane są w
 2. Infinity - nieskończoność
 
 #### NaN
-`NaN` zwracane jest w przypadku gdy nie można skonwertować wartość na typ number.
+`NaN` zwracane jest w przypadku gdy nie można skonwertować wartości na typ number.
 ```javascript
 // konwersja typu string, który nie jest złożony z cyfr
 console.log(Number('string')); // NaN
