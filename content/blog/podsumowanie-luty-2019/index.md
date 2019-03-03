@@ -4,7 +4,7 @@ date:  '2019-02-28'
 heroImg: './hero_summary_feb.png'
 tags: ['podsumowania', 'informacje']
 ---
-Przyszła pora na podsumowanie lutego 2019. To był ciężki miesiąc, na co w głównej mierze złożyły się sprawy prywatno-zawodowe. Natłok rzeczy do zrobienia niezwiązanych z blogiem był na tyle duży, że ciężko mi było zachować jakąś systematyczność w pisaniu. Jak zatem wyglądało życie bloga w tym miesiącu? Zapraszam do podsumowania 😉.
+Przyszła pora na podsumowanie lutego 2019. To był ciężki miesiąc, na co w głównej mierze złożyły się sprawy zawodowe. Natłok rzeczy do zrobienia niezwiązanych z blogiem był na tyle duży, że ciężko mi było zachować jakąś systematyczność w pisaniu. Jak zatem wyglądało życie bloga w tym miesiącu? Zapraszam do podsumowania 😉.
 
 ### Co udało się zrobić?
 W lutym praca nad blogiem z różnych względów odbywała się głównie weekendami, jedynie ostatni tydzień był na tyle spokojny bym mógł podziałać coś więcej w ciągu tygodnia. Zobaczmy co udało się zrobić.
@@ -16,7 +16,7 @@ Powstały 2 wpisy dotyczące podstaw JavaScript oraz 1 związany z GatsbyJS. Wsz
 Udało mi się dorobić wyświetlanie obrazków tytułowych w spisie postów, a także w każdym poście z osobna. Blog zaczyna dzięki temu wyglądać bardziej kolorowo i różnorodnie. Każda seria postów ma swój graficzny motyw przewodni.
 
 #### Wyświetlanie miniaturek w social media
-Dzięki dodaniu obrazków tytułowych do postów, mogłem poprawić wyświetlanie miniaturki widocznej przy udostępnianiu wpisu w social media. Od teraz nie będzie "biedy" z samym tekstem, wydaje mi się, że motyw graficzny jest czynnikiem mocno przyciągającym ludzką uwagę. Poniżej możecie zobaczy jak to się będzie prezentować w poszczególnych portalach społecznościowych.
+Dzięki dodaniu obrazków tytułowych do postów, mogłem poprawić wyświetlanie miniaturki widocznej przy udostępnianiu wpisu w social media. Od teraz nie będzie "biedy" z samym tekstem, wydaje mi się, że motyw graficzny jest czynnikiem mocno przyciągającym uwagę. Poniżej możecie zobaczy jak to się będzie prezentować w poszczególnych portalach społecznościowych.
 
 Facebook:
 
